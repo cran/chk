@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>chk Families</title>
+
+
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#header {
+text-align: center;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">chk Families</h1>
+
+
+
+<p>The <code>chk_</code> functions (and their <code>vld_</code> equivalents) can be divided into the following families. For reasons of space, the <code>x_name = NULL</code> argument is not shown.</p>
+<div id="check-logical" class="section level2">
+<h2>Check Logical</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_true(x)</code></td>
+<td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x) &amp;&amp; x</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_false(x)</code></td>
+<td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x) &amp;&amp; !x</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_flag(x)</code></td>
+<td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_lgl(x)</code></td>
+<td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-scalars" class="section level2">
+<h2>Check Scalars</h2>
+<table>
+<colgroup>
+<col width="22%"></col>
+<col width="77%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_scalar(x)</code></td>
+<td align="left"><code>length(x) == 1L</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_number(x)</code></td>
+<td align="left"><code>is.numeric(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_whole_number(x)</code></td>
+<td align="left"><code>vld_number(x) &amp;&amp; (is.integer(x) || vld_true(all.equal(x, trunc(x))))</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_string(x)</code></td>
+<td align="left"><code>is.character(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_date(x)</code></td>
+<td align="left"><code>inherits(x, &quot;Date&quot;) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_datetime(x)</code></td>
+<td align="left"><code>inherits(x, &quot;POSIXct&quot;) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-ranges" class="section level2">
+<h2>Check Ranges</h2>
+<table>
+<colgroup>
+<col width="33%"></col>
+<col width="66%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_range(x, range = c(0, 1))</code></td>
+<td align="left"><code>all(x[!is.na(x)] &gt;= range[1] &amp; x[!is.na(x)] &lt;= range[2])</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_lt(x, value = 0)</code></td>
+<td align="left"><code>all(x[!is.na(x)] &lt; value)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_lte(x, value = 0)</code></td>
+<td align="left"><code>all(x[!is.na(x)] &lt;= value)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_gt(x, value = 0)</code></td>
+<td align="left"><code>all(x[!is.na(x)] &gt; value)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_gte(x, value = 0)</code></td>
+<td align="left"><code>all(x[!is.na(x)] &gt;= value)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-equal" class="section level2">
+<h2>Check Equal</h2>
+<table>
+<colgroup>
+<col width="60%"></col>
+<col width="40%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_identical(x, y)</code></td>
+<td align="left"><code>identical(x, y)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_equal(x, y, tolerance = sqrt(.Machine$double.eps))</code></td>
+<td align="left"><code>vld_true(all.equal(x, y, tolerance))</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_equivalent(x, y, tolerance = sqrt(.Machine$double.eps))</code></td>
+<td align="left"><code>vld_true(all.equal(x, y, tolerance, check.attributes = FALSE))</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-all" class="section level2">
+<h2>Check All</h2>
+<table>
+<colgroup>
+<col width="33%"></col>
+<col width="66%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_all(x, chk_fun, ...)</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_all_identical(x)</code></td>
+<td align="left"><code>length(x) &lt; 2L || all(vapply(x, vld_identical, TRUE, y = x[[1]]))</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_all_equal(x, tolerance = sqrt(.Machine$double.eps))</code></td>
+<td align="left"><code>length(x) &lt; 2L || all(vapply(x, vld_equal, TRUE, y = x[[1]], tolerance = tolerance))</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_all_equivalent(x, tolerance = sqrt(.Machine$double.eps))</code></td>
+<td align="left"><code>length(x) &lt; 2L || all(vapply(x, vld_equivalent, TRUE, y = x[[1]], tolerance = tolerance))</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-set" class="section level2">
+<h2>Check Set</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_setequal(x, values)</code></td>
+<td align="left"><code>setequal(x, values)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_subset(x, values)</code></td>
+<td align="left"><code>all(x %in% values)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_superset(x, values)</code></td>
+<td align="left"><code>all(values %in% x)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-is" class="section level2">
+<h2>Check Is</h2>
+<table>
+<colgroup>
+<col width="33%"></col>
+<col width="66%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_s3_class(x, class)</code></td>
+<td align="left"><code>!isS4(x) &amp;&amp; inherits(x, class)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_s4_class(x, class)</code></td>
+<td align="left"><code>isS4(x) &amp;&amp; inherits(x, class)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_vector(x)</code></td>
+<td align="left"><code>is.vector(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_atomic(x)</code></td>
+<td align="left"><code>is.atomic(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_list(x)</code></td>
+<td align="left"><code>is.list(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_function(x, formals = NULL)</code></td>
+<td align="left"><code>is.function(x) &amp;&amp; (is.null(formals) || length(formals(x)) == formals)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_numeric(x)</code></td>
+<td align="left"><code>is.numeric(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_whole_numeric(x)</code></td>
+<td align="left"><code>is.integer(x) || (is.double(x) &amp;&amp; vld_true(all.equal(x, as.integer(x))))</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-null" class="section level2">
+<h2>Check NULL</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_null(x)</code></td>
+<td align="left"><code>is.null(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_not_null(x)</code></td>
+<td align="left"><code>!is.null(x)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check" class="section level2">
+<h2>Check …</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_used(...)</code></td>
+<td align="left"><code>length(list(...)) != 0L</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_unused(...)</code></td>
+<td align="left"><code>length(list(...)) == 0L</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-files" class="section level2">
+<h2>Check Files</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_file(x)</code></td>
+<td align="left"><code>vld_string(x) &amp;&amp; file.exists(x) &amp;&amp; !dir.exists(x)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_ext(x, ext)</code></td>
+<td align="left"><code>vld_string(x) &amp;&amp; vld_subset(tools::file_ext(x), ext)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_dir(x)</code></td>
+<td align="left"><code>vld_string(x) &amp;&amp; dir.exists(x)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="check-miscellaneous" class="section level2">
+<h2>Check Miscellaneous</h2>
+<table>
+<colgroup>
+<col width="40%"></col>
+<col width="60%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Function</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>chk_match(x, regexp = &quot;.+&quot;)</code></td>
+<td align="left"><code>all(grepl(regexp, x[!is.na(x)]))</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_named(x)</code></td>
+<td align="left"><code>!is.null(names(x))</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_not_empty(x)</code></td>
+<td align="left"><code>length(x) != 0L</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_not_any_na(x)</code></td>
+<td align="left"><code>!anyNA(x)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_unique(x, incomparables = FALSE)</code></td>
+<td align="left"><code>!anyDuplicated(x, incomparables = incomparables)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+# chk 0.2.0
+
+## Major Changes
+
+- Added `x_name = NULL` argument to relevant `chk_` functions.
+- Replaced `err = FALSE` variant with `vld_` variant.
+- Switched from `stop()`, `warning()` and `message()` to rlang variants `abort()`, `warn()` and `inform()`.
+- All error messages now start with x_name.
+- Err capitalizes first character and adds missing period (tidyverse style).
+
+## New Functions
+
+- `chk_all()`
+- `chk_atomic()`
+- `chk_environment()`
+- `chk_ext()`
+- `chk_has()`
+- `chk_not_empty()`
+- `chk_s3_class()`
+- `chk_s4_class()`
+- `chk_setequal()`
+
+## Newly Exported Functions
+
+- `backtick_chk()`
+- `unbacktick_chk()`.
+
+## New Arguments
+
+- `formals` argument to `chk_function()`.
+- `tidy = TRUE` argument to errors, warnings and messages.
+- `n = NULL` and `call. = FALSE` args to error message generating functions.
+- `ellipsis = 10L` argument to `cc()`.
+- `sep = ", "` arg to `cc()`.
+- `incomparables = FALSE` argument to `chk_unique()`.
+- `%y` to sprintf-like types. 
+
+## (Soft) Deprecated Functions
+
+- `chk_no_missing()` for `chk_not_any_na()`. 
+- `chk_files()` and `chk_dirs()` for `chk_all(x, chk_file)` etc.
+- `deparse_backtick()` for `deparse_backtick_chk()`.
+
+- `chk_length()`, `chk_proportion()` and `chk_count()`.
+- `chk_on()`, `chk_off()` and `is_chk_on()`.
+
+## Minor Changes
+
+- Changed `chk_match()` so ignores missing values.
+- Changed `chk_true()` (and `chk_false()`) to same behavior as `isTRUE` in R >= 3.5.
+- Extended `chk_unique()` to handle `incomparables != FALSE` with data frames.
+- Changed to `range = c(0,1)` for `chk_range()`.
+
+# chk 0.0.1
+
+- Initial release.
