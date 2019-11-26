@@ -1,11 +1,11 @@
-#' Check File or Directory Exist
+#' Check File Exists
 #'
 #' @description
-#' Checks if file or directory exists using
+#' Checks if file exists using
 #'
 #' `vld_string(x) && file.exists(x) && !dir.exists(x)`
 #'
-#' @inheritParams chk_flag
+#' @inheritParams params
 #' @return
 #' The `chk_` functions throw an informative error if the test fails.
 #'
@@ -19,18 +19,18 @@
 #' # chk_file
 #' try(chk_file(tempfile()))
 chk_file <- function(x, x_name = NULL) {
-  if(vld_file(x)) {
+  if (vld_file(x)) {
     return(invisible())
   }
-  if(is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   chk_string(x, x_name = x_name)
-  if(dir.exists(x)) {
+  if (dir.exists(x)) {
     abort_chk(x_name, " must specify a file ('", x, "' is a directory)")
   }
   abort_chk(x_name, " must specify an existing file ('", x, "' can't be found)")
 }
 
-#' @describeIn chk_file Validate File
+#' @describeIn chk_file Validate File Exists
 #'
 #' @export
 #'

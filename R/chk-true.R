@@ -5,13 +5,13 @@
 #'
 #' `is.logical(x) && length(x) == 1L && !anyNA(x) && x`
 #'
-#' @inheritParams  chk_flag
+#' @inheritParams params
 #' @return
 #' The `chk_` functions throw an informative error if the test fails.
 #'
 #' The `vld_` functions return a flag indicating whether the test was met.
 #'
-#' @family chk_logicalscalars
+#' @family chk_logical
 #' @export
 #'
 #' @examples
@@ -20,10 +20,10 @@
 #' chk_true(TRUE)
 #' try(chk_true(1))
 chk_true <- function(x, x_name = NULL) {
-  if(vld_true(x)) {
+  if (vld_true(x)) {
     return(invisible())
   }
-  if(is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must be TRUE")
 }
 

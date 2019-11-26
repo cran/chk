@@ -326,8 +326,8 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </tbody>
 </table>
 </div>
-<div id="check-equal" class="section level2">
-<h2>Check Equal</h2>
+<div id="check-equals" class="section level2">
+<h2>Check Equals</h2>
 <table>
 <colgroup>
 <col width="60%"></col>
@@ -355,8 +355,8 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </tbody>
 </table>
 </div>
-<div id="check-all" class="section level2">
-<h2>Check All</h2>
+<div id="check-alls" class="section level2">
+<h2>Check Alls</h2>
 <table>
 <colgroup>
 <col width="33%"></col>
@@ -428,42 +428,46 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>chk_s3_class(x, class)</code></td>
-<td align="left"><code>!isS4(x) &amp;&amp; inherits(x, class)</code></td>
-</tr>
-<tr class="even">
-<td align="left"><code>chk_s4_class(x, class)</code></td>
-<td align="left"><code>isS4(x) &amp;&amp; inherits(x, class)</code></td>
-</tr>
-<tr class="odd">
-<td align="left"><code>chk_vector(x)</code></td>
-<td align="left"><code>is.vector(x)</code></td>
-</tr>
-<tr class="even">
 <td align="left"><code>chk_atomic(x)</code></td>
 <td align="left"><code>is.atomic(x)</code></td>
 </tr>
-<tr class="odd">
-<td align="left"><code>chk_list(x)</code></td>
-<td align="left"><code>is.list(x)</code></td>
-</tr>
 <tr class="even">
+<td align="left"><code>chk_environment(x)</code></td>
+<td align="left"><code>is.environment(x)</code></td>
+</tr>
+<tr class="odd">
 <td align="left"><code>chk_function(x, formals = NULL)</code></td>
 <td align="left"><code>is.function(x) &amp;&amp; (is.null(formals) || length(formals(x)) == formals)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_list(x)</code></td>
+<td align="left"><code>is.list(x)</code></td>
 </tr>
 <tr class="odd">
 <td align="left"><code>chk_numeric(x)</code></td>
 <td align="left"><code>is.numeric(x)</code></td>
 </tr>
 <tr class="even">
+<td align="left"><code>chk_s3_class(x, class)</code></td>
+<td align="left"><code>!isS4(x) &amp;&amp; inherits(x, class)</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>chk_s4_class(x, class)</code></td>
+<td align="left"><code>isS4(x) &amp;&amp; methods::is(x, class)</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>chk_vector(x)</code></td>
+<td align="left"><code>is.vector(x)</code></td>
+</tr>
+<tr class="odd">
 <td align="left"><code>chk_whole_numeric(x)</code></td>
 <td align="left"><code>is.integer(x) || (is.double(x) &amp;&amp; vld_true(all.equal(x, as.integer(x))))</code></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="check-null" class="section level2">
-<h2>Check NULL</h2>
+<div id="check-nulls" class="section level2">
+<h2>Check NULLs</h2>
 <table>
 <thead>
 <tr class="header">
@@ -483,8 +487,8 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </tbody>
 </table>
 </div>
-<div id="check" class="section level2">
-<h2>Check …</h2>
+<div id="check-ellipsis" class="section level2">
+<h2>Check Ellipsis</h2>
 <table>
 <thead>
 <tr class="header">

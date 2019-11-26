@@ -5,14 +5,13 @@
 #'
 #' `length(x) < 2L || all(vapply(x, vld_equivalent, TRUE, y = x[[1]], tolerance = tolerance))`
 #'
-#' @inheritParams chk_flag
-#' @param tolerance A non-negative numeric scalar.
+#' @inheritParams params
 #' @return
 #' The `chk_` function throws an informative error if the test fails.
 #'
 #' The `vld_` function returns a flag indicating whether the test was met.
 #'
-#' @family chk_all
+#' @family chk_alls
 #' @export
 #'
 #' @examples
@@ -23,10 +22,10 @@
 #' chk_all_equivalent(list(c(x = 1), c(x = 1)))
 #' chk_all_equivalent(list(c(x = 1), c(y = 1)))
 chk_all_equivalent <- function(x, tolerance = sqrt(.Machine$double.eps), x_name = NULL) {
-  if(vld_all_equivalent(x, tolerance = tolerance)) {
+  if (vld_all_equivalent(x, tolerance = tolerance)) {
     return(invisible())
   }
-  if(is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must have equivalent elements")
 }
 

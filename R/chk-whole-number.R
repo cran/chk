@@ -9,7 +9,7 @@
 #'
 #' **Bad**: `"a"`, `1:3`, `NA_integer_`, `log(10)`
 #'
-#' @inheritParams chk_flag
+#' @inheritParams params
 #' @return
 #' The `chk_` function throws an informative error if the test fails.
 #'
@@ -24,10 +24,10 @@
 #' chk_whole_number(2)
 #' try(chk_whole_number(1.1))
 chk_whole_number <- function(x, x_name = NULL) {
-  if(vld_whole_number(x)) {
+  if (vld_whole_number(x)) {
     return(invisible())
   }
-  if(is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(
     x_name,
     " must be a whole number (non-missing integer scalar or double equivalent)"
