@@ -1,3 +1,7 @@
+# chk 0.3.0
+
+- Added `chk_sorted()` and `vld_sorted()`.
+
 # chk 0.2.1
 
 ## Minor Changes

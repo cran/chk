@@ -1,7 +1,7 @@
-a1c0efec1ed39336f4793e957081b6d1 *DESCRIPTION
+a9481d464149eb857d02c4fd19140ce9 *DESCRIPTION
 ea57de7e09093be93ce7e63f5fff8105 *LICENSE
-e429840fb8c4fd38b2cb2022f520c95b *NAMESPACE
-4ef25c64c0a5b3d6976118fe96f768e3 *NEWS.md
+e4ad56f9e77122750d9f96bd7d9ab5c9 *NAMESPACE
+492b03b07b93696aa5c04a3ceaa4f05b *NEWS.md
 2f60ab26870a6ffbab25701efc7612cf *R/aaa.R
 aaf379c56bfec2e8dd260b1a630bbb5c *R/cc.R
 19372d2e6d466587b81e2ef68f93159d *R/chk-all-equal.R
@@ -41,6 +41,7 @@ f88d419f49ce1a32c1c5aac129b25361 *R/chk-range.R
 7a6da9760236d3795d6d157d02725754 *R/chk-s4-class.R
 e6a3f23f7cef05d55261dbb9de4121e9 *R/chk-scalar.R
 03a03d3f52d32d55d5a17012c7c4e351 *R/chk-setequal.R
+4da546c6318b6e811c37e4cc26849993 *R/chk-sorted.R
 077ed49c062af9068cceec535ff90db5 *R/chk-string.R
 d5ed6e6813391ad5d9ab1d9bfd1029ee *R/chk-subset.R
 b0ed71de72d646ada3ddcb6325ea3906 *R/chk-superset.R
@@ -60,15 +61,15 @@ b79a003118d8484187973979086c6846 *R/p.R
 c2234b93ab70c0df9f7ef97a1027388b *R/params.R
 63d074893376d6352fc74b7f4bad8355 *R/utils.R
 0337babe2151ce2d71c1c60792e34c0c *R/vld.R
-452d12d95b4bd9cf2c12c7826b463f74 *README.md
-1f6d66a21693ab1407c800ab611cbf87 *build/chk.pdf
-e117191d489b7828d8087122db35b3c3 *build/vignette.rds
+b90cdf9ef2a8c69ed955173aa61666de *README.md
+06e51b40188f280a0b02c910c3dfca51 *build/chk.pdf
+620afb906a499e370ee0eb99ddcb7e7b *build/vignette.rds
 3c9e2d06e8560272e30c98b0c827478b *inst/doc/chk-families.R
 e613154e027b41fe6e0c6a8a340d0b97 *inst/doc/chk-families.Rmd
-6c5165b28fdc72d7995448436f59c1cb *inst/doc/chk-families.html
+4ee7456c82acbcdccfa1168561deec57 *inst/doc/chk-families.html
 68dd1117604705df4a3d5b79e3247f31 *inst/doc/chk.R
 ad2615509f7ba4568877ce8780faaefe *inst/doc/chk.Rmd
-ac43037c4bf5b2352d9ebcb2a22de355 *inst/doc/chk.html
+96bc522c022f68eba349e8a7384b7cec *inst/doc/chk.html
 4077d064b840cf5dd3d258388889dd98 *man/aaa.Rd
 035934ba1934b5152083d3460cedfa42 *man/abort_chk.Rd
 daf6e076be681eb661f3fc39ade56770 *man/cc.Rd
@@ -99,8 +100,8 @@ dc5b999f48438b242e5a13a002ffffa2 *man/chk_lt.Rd
 1c3e7c8c81a0b88559c270a5b5a6d66c *man/chk_lte.Rd
 c74c607f0f9c3356fba82ef3a814f7a7 *man/chk_match.Rd
 b583dcb747400ab9cc98300726593c6c *man/chk_named.Rd
-80a114572698e9e02cd2cd6c6fd0aff9 *man/chk_not_any_na.Rd
-b3c894b192c48017f10e8384f1bb6f99 *man/chk_not_empty.Rd
+c34bc4bd6493c8643dcb743ce6e515f3 *man/chk_not_any_na.Rd
+30cd6f0d89fca67a9da7c6bda29fb841 *man/chk_not_empty.Rd
 cc9e12bdabfdaf8ca3cb7e54b0e9e0e9 *man/chk_not_null.Rd
 804f4433b0b2dc0f17abc5641b3c54e6 *man/chk_null.Rd
 038f9a9c29f328a1414645eeeb671734 *man/chk_number.Rd
@@ -110,6 +111,7 @@ cc9e12bdabfdaf8ca3cb7e54b0e9e0e9 *man/chk_not_null.Rd
 b6d077d178ded7ad191c8438f7fc2caf *man/chk_s4_class.Rd
 7f99a14903a0a119086647637168ced2 *man/chk_scalar.Rd
 45a3313a2a51e24107a50712e1d6e519 *man/chk_setequal.Rd
+f1fc1feecfe35c4d75d3454eb1116b9c *man/chk_sorted.Rd
 9b3781d3d866a4c7ff95f596e9d3ea64 *man/chk_string.Rd
 ce24453cf3eebc135abc5f8c852ad3ee *man/chk_subset.Rd
 a83dd930454798ca1e4ae09cb72ce44e *man/chk_superset.Rd
@@ -151,6 +153,7 @@ df1f4370cca00ba81cec54555c3c4543 *tests/testthat/test-chk-all.R
 733004d364110ec381aeffbf35735784 *tests/testthat/test-chk-number.R
 44b95bc989ae445bc47e24b178f25766 *tests/testthat/test-chk-numeric.R
 5e1b68de1eb9af83a2058a575d70e967 *tests/testthat/test-chk-range.R
+ce32c7767d09d286ebe8c4be0f92a1a8 *tests/testthat/test-chk-sorted.R
 5e9d6a4107d647ffc7c8d58f746689f6 *tests/testthat/test-chk-string.R
 e8bc339cbcd552bd18df2e77775c37d1 *tests/testthat/test-chk-subset.R
 c565cb6da563363f4dfe5f427705aa83 *tests/testthat/test-chk-true.R
