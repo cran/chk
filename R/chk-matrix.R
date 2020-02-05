@@ -1,9 +1,9 @@
-#'  Check Vector
+#' Check Matrix
 #'
 #' @description
-#' Checks if is a vector using
+#' Checks if is a matrix using
 #'
-#' `is.vector(x)`
+#' `is.matrix(x)`
 #'
 #' @inheritParams params
 #' @return
@@ -16,24 +16,24 @@
 #'
 #' @examples
 #'
-#' # chk_vector
-#' chk_vector(1)
-#' chk_vector(list())
-#' try(chk_vector(matrix(1)))
-chk_vector <- function(x, x_name = NULL) {
-  if (vld_vector(x)) {
+#' # chk_matrix
+#' chk_matrix(matrix(1))
+#' try(chk_matrix(array(1)))
+chk_matrix <- function(x, x_name = NULL) {
+  if (vld_matrix(x)) {
     return(invisible())
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
-  abort_chk(x_name, " must be a vector", x = x)
+  abort_chk(x_name, " must be an matrix", x = x)
 }
 
-#' @describeIn chk_vector Validate Vector
+#' @describeIn chk_matrix Validate Matrix
 #'
 #' @export
 #'
 #' @examples
 #'
-#' # vld_vector
-#' vld_vector(1)
-vld_vector <- function(x) is.vector(x)
+#' # vld_matrix
+#' vld_matrix(1)
+#' vld_matrix(matrix(1))
+vld_matrix <- function(x) is.matrix(x)

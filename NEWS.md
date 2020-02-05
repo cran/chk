@@ -1,3 +1,17 @@
+# chk 0.3.1
+
+- Added `expect_chk_error()` (fixes #44)
+- Added `chk_matrix()` and `vld_matrix()`.
+- Added `chk_array()` and `vld_array()`.
+
+# chk 0.3.0.9003
+
+- `abort_chk` now allows original arguments to be attached.
+- Added `chk_tz()` and `vld_tz()`.
+- Added `chk_matrix()` and `vld_matrix()`.
+- Added `chk_array()` and `vld_array()`.
+- Added `expect_chk_error()`.
+
 # chk 0.3.0
 
 - Added `chk_sorted()` and `vld_sorted()`.

@@ -1,9 +1,9 @@
-#'  Check Vector
+#' Check Array
 #'
 #' @description
-#' Checks if is a vector using
+#' Checks if is a array using
 #'
-#' `is.vector(x)`
+#' `is.array(x)`
 #'
 #' @inheritParams params
 #' @return
@@ -16,24 +16,24 @@
 #'
 #' @examples
 #'
-#' # chk_vector
-#' chk_vector(1)
-#' chk_vector(list())
-#' try(chk_vector(matrix(1)))
-chk_vector <- function(x, x_name = NULL) {
-  if (vld_vector(x)) {
+#' # chk_array
+#' chk_array(array(1))
+#' try(chk_array(matrix(1)))
+chk_array <- function(x, x_name = NULL) {
+  if (vld_array(x)) {
     return(invisible())
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
-  abort_chk(x_name, " must be a vector", x = x)
+  abort_chk(x_name, " must be an array", x = x)
 }
 
-#' @describeIn chk_vector Validate Vector
+#' @describeIn chk_array Validate Array
 #'
 #' @export
 #'
 #' @examples
 #'
-#' # vld_vector
-#' vld_vector(1)
-vld_vector <- function(x) is.vector(x)
+#' # vld_array
+#' vld_array(1)
+#' vld_array(array(1))
+vld_array <- function(x) is.array(x)
