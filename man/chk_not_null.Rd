@@ -30,11 +30,9 @@ Checks if not NULL using
 }}
 
 \examples{
-
 # chk_not_null
 try(chk_not_null(NULL))
 chk_not_null(1)
-
 # vld_not_null
 vld_not_null(1)
 vld_not_null(NULL)

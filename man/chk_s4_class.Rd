@@ -32,11 +32,9 @@ Checks inherits from S4 class using
 }}
 
 \examples{
-
 # chk_s4_class
 try(chk_s4_class(1, "numeric"))
 chk_s4_class(getClass("MethodDefinition"), "classRepresentation")
-
 # vld_s4_class
 vld_s4_class(numeric(0), "numeric")
 vld_s4_class(getClass("MethodDefinition"), "classRepresentation")
@@ -45,9 +43,8 @@ vld_s4_class(getClass("MethodDefinition"), "classRepresentation")
 Other chk_is: 
 \code{\link{chk_array}()},
 \code{\link{chk_atomic}()},
-\code{\link{chk_environment}()},
+\code{\link{chk_data}()},
 \code{\link{chk_function}()},
-\code{\link{chk_list}()},
 \code{\link{chk_matrix}()},
 \code{\link{chk_numeric}()},
 \code{\link{chk_s3_class}()},

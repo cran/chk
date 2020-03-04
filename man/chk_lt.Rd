@@ -32,11 +32,9 @@ Checks if all non-missing values are less than value using
 }}
 
 \examples{
-
 # chk_lt
 chk_lt(-0.1)
 try(chk_lt(c(-0.1, 0.2)))
-
 # vld_lt
 vld_lt(numeric(0))
 vld_lt(0)

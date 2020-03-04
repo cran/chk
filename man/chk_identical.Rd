@@ -32,13 +32,11 @@ Checks if is identical to y using
 }}
 
 \examples{
-
 # chk_identical
 chk_identical(1, 1)
 try(chk_identical(1, 1L))
 chk_identical(c(1, 1), c(1, 1))
 try(chk_identical(1, c(1, 1)))
-
 vld_identical(1, 1)
 }
 \seealso{

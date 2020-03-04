@@ -5,24 +5,20 @@
 #'
 #' `!anyNA(x)`
 #'
-#' **Good**: `1`, `1:2`, `"1"`, `logical(0)`.
+#' **Pass**: `1`, `1:2`, `"1"`, `logical(0)`.
 #'
-#' **Bad**: `NA`, `c(1, NA)`.
+#' **Fail**: `NA`, `c(1, NA)`.
 #'
-#' @inheritParams chk_flag
-#' @return
-#' The `chk_` function throws an informative error if the test fails.
+#' @inheritParams params
+#' @inherit params return
 #'
-#' The `vld_` function returns a flag indicating whether the test was met.
-#'
-#' @family chk_miscellaneous
-#' @export
+#' @family chk_misc
 #'
 #' @examples
-#'
 #' # chk_not_any_na
 #' chk_not_any_na(1)
 #' try(chk_not_any_na(NA))
+#' @export
 chk_not_any_na <- function(x, x_name = NULL) {
   if (vld_not_any_na(x)) {
     return(invisible())
@@ -34,10 +30,7 @@ chk_not_any_na <- function(x, x_name = NULL) {
 
 #' @describeIn chk_not_any_na Validate Not Any Missing Values
 #'
-#' @export
-#'
 #' @examples
-#'
 #' # vld_not_any_na
 #' vld_not_any_na(1)
 #' vld_not_any_na(1:2)
@@ -45,4 +38,5 @@ chk_not_any_na <- function(x, x_name = NULL) {
 #' vld_not_any_na(integer(0))
 #' vld_not_any_na(c(NA, 1))
 #' vld_not_any_na(TRUE)
+#' @export
 vld_not_any_na <- function(x) !anyNA(x)

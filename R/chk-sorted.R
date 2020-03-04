@@ -6,19 +6,15 @@
 #' `is.unsorted(x)`
 #'
 #' @inheritParams params
-#' @return
-#' The `chk_` function throws an informative error if the test fails.
+#' @inherit params return
 #'
-#' The `vld_` function returns a flag indicating whether the test was met.
-#'
-#' @family chk_miscellaneous
-#' @export
+#' @family chk_misc
 #'
 #' @examples
-#'
 #' # chk_sorted
 #' chk_sorted(1:2)
 #' try(chk_sorted(2:1))
+#' @export
 chk_sorted <- function(x, x_name = NULL) {
   if (vld_sorted(x)) {
     return(invisible())
@@ -29,11 +25,9 @@ chk_sorted <- function(x, x_name = NULL) {
 
 #' @describeIn chk_sorted Validate Sorted
 #'
-#' @export
-#'
 #' @examples
-#'
 #' # vld_sorted
 #' vld_sorted(1:2)
 #' vld_sorted(2:1)
+#' @export
 vld_sorted <- function(x) !is.unsorted(x)

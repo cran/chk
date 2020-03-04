@@ -30,11 +30,9 @@ Check if FALSE using
 }}
 
 \examples{
-
 # chk_false
 chk_false(FALSE)
 try(chk_false(0))
-
 # vld_false
 vld_false(TRUE)
 vld_false(FALSE)

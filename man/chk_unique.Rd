@@ -18,9 +18,9 @@ FALSE means that all values can be compared.}
 \item{x_name}{A string of the name of object x or NULL.}
 }
 \value{
-The \code{chk_} functions throw an informative error if the test fails.
+The \code{chk_} function throws an informative error if the test fails.
 
-The \code{vld_} functions return a flag indicating whether the test was met.
+The \code{vld_} function returns a flag indicating whether the test was met.
 }
 \description{
 Checks if unique using
@@ -33,12 +33,10 @@ Checks if unique using
 }}
 
 \examples{
-
 # chk_unique
 chk_unique(c(NA, 2))
 try(chk_unique(c(NA, NA, 2)))
 chk_unique(c(NA, NA, 2), incomparables = NA)
-
 # vld_unique
 vld_unique(NULL)
 vld_unique(numeric(0))
@@ -49,6 +47,9 @@ vld_unique(c(NA, NA, 2), incomparables = NA)
 \seealso{
 Other chk_misc: 
 \code{\link{chk_match}()},
-\code{\link{chk_named}()}
+\code{\link{chk_named}()},
+\code{\link{chk_not_any_na}()},
+\code{\link{chk_not_empty}()},
+\code{\link{chk_sorted}()}
 }
 \concept{chk_misc}

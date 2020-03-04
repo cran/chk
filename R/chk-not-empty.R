@@ -5,24 +5,20 @@
 #'
 #' `length(x) != 0L`
 #'
-#' **Good**: `1`, `1:2`, `NA`, `matrix(1:3)`, `list(1)`, `data.frame(x = 1)`.
+#' **Pass**: `1`, `1:2`, `NA`, `matrix(1:3)`, `list(1)`, `data.frame(x = 1)`.
 #'
-#' **Bad**: `NULL`, `logical(0)`, `list()`, `data.frame()`.
+#' **Fail**: `NULL`, `logical(0)`, `list()`, `data.frame()`.
 #'
-#' @inheritParams chk_flag
-#' @return
-#' The `chk_` function throws an informative error if the test fails.
+#' @inheritParams params
+#' @inherit params return
 #'
-#' The `vld_` function returns a flag indicating whether the test was met.
-#'
-#' @family chk_miscellaneous
-#' @export
+#' @family chk_misc
 #'
 #' @examples
-#'
 #' # chk_not_empty
 #' chk_not_empty(1)
 #' try(chk_not_empty(numeric(0)))
+#' @export
 chk_not_empty <- function(x, x_name = NULL) {
   if (vld_not_empty(x)) {
     return(invisible())
@@ -33,10 +29,7 @@ chk_not_empty <- function(x, x_name = NULL) {
 
 #' @describeIn chk_not_empty Validate Not Empty
 #'
-#' @export
-#'
 #' @examples
-#'
 #' # vld_not_empty
 #' vld_not_empty(1)
 #' vld_not_empty(matrix(1:3))
@@ -44,4 +37,5 @@ chk_not_empty <- function(x, x_name = NULL) {
 #' vld_not_empty(list(1))
 #' vld_not_empty(NULL)
 #' vld_not_empty(list())
+#' @export
 vld_not_empty <- function(x) length(x) != 0L

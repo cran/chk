@@ -30,11 +30,9 @@ Checks if directory exists using
 }}
 
 \examples{
-
 # chk_dir
 chk_dir(tempdir())
 try(chk_dir(tempfile()))
-
 # vld_dir
 vld_dir(1)
 vld_dir(tempdir())

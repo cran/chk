@@ -30,11 +30,9 @@ Checks if logical scalar using
 }}
 
 \examples{
-
 # chk_lgl
 chk_lgl(NA)
 try(chk_lgl(1))
-
 # vld_lgl
 vld_lgl(TRUE)
 vld_lgl(FALSE)

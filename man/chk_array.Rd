@@ -30,11 +30,9 @@ Checks if is a array using
 }}
 
 \examples{
-
 # chk_array
 chk_array(array(1))
 try(chk_array(matrix(1)))
-
 # vld_array
 vld_array(1)
 vld_array(array(1))
@@ -42,9 +40,8 @@ vld_array(array(1))
 \seealso{
 Other chk_is: 
 \code{\link{chk_atomic}()},
-\code{\link{chk_environment}()},
+\code{\link{chk_data}()},
 \code{\link{chk_function}()},
-\code{\link{chk_list}()},
 \code{\link{chk_matrix}()},
 \code{\link{chk_numeric}()},
 \code{\link{chk_s3_class}()},

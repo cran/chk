@@ -34,13 +34,11 @@ Checks if is equivalent (equal ignoring attributes) to y using
 }}
 
 \examples{
-
 # chk_equivalent
 chk_equivalent(1, 1.00000001)
 try(chk_equivalent(1, 1.0000001))
 chk_equivalent(1, 1L)
 chk_equivalent(c(x = 1), c(y = 1))
-
 vld_equivalent(c(x = 1), c(y = 1L))
 }
 \seealso{

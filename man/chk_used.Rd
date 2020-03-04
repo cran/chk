@@ -28,7 +28,6 @@ Checks if is ... used using
 }}
 
 \examples{
-
 # chk_used
 fun <- function(x, ...) {
   chk_used(...)
@@ -36,7 +35,6 @@ fun <- function(x, ...) {
 }
 try(fun(1))
 fun(1, 2)
-
 # vld_used
 fun <- function(x, ...) {
   vld_used(...)

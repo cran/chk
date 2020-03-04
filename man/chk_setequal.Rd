@@ -32,11 +32,9 @@ Checks if equal set using
 }}
 
 \examples{
-
 # chk_setequal
 chk_setequal(1:2, 2:1)
 try(chk_setequal(1, 1:2))
-
 # vld_setequal
 vld_setequal(1, 1)
 vld_setequal(1:2, 2:1)
@@ -45,6 +43,7 @@ vld_setequal(1:2, 2)
 }
 \seealso{
 Other chk_set: 
+\code{\link{chk_join}()},
 \code{\link{chk_subset}()},
 \code{\link{chk_superset}()}
 }

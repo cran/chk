@@ -32,11 +32,9 @@ Checks if all non-missing values are less than or equal to y using
 }}
 
 \examples{
-
 # chk_lte
 chk_lte(0)
 try(chk_lte(0.1))
-
 # vld_lte
 vld_lte(numeric(0))
 vld_lte(0)

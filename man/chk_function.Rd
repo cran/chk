@@ -32,11 +32,9 @@ Checks if is a function using
 }}
 
 \examples{
-
 # chk_function
 chk_function(mean)
 try(chk_function(1))
-
 # vld_function
 vld_function(mean)
 vld_function(function(x) x)
@@ -47,8 +45,7 @@ vld_function(list(1))
 Other chk_is: 
 \code{\link{chk_array}()},
 \code{\link{chk_atomic}()},
-\code{\link{chk_environment}()},
-\code{\link{chk_list}()},
+\code{\link{chk_data}()},
 \code{\link{chk_matrix}()},
 \code{\link{chk_numeric}()},
 \code{\link{chk_s3_class}()},

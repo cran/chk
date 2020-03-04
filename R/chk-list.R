@@ -6,19 +6,15 @@
 #' `is.list(x)`
 #'
 #' @inheritParams params
-#' @return
-#' The `chk_` function throws an informative error if the test fails.
+#' @inherit params return
 #'
-#' The `vld_` function returns a flag indicating whether the test was met.
-#'
-#' @family chk_is
-#' @export
+#' @family chk_typeof
 #'
 #' @examples
-#'
 #' # chk_list
 #' chk_list(list())
 #' try(chk_list(1))
+#' @export
 chk_list <- function(x, x_name = NULL) {
   if (vld_list(x)) {
     return(invisible())
@@ -29,14 +25,12 @@ chk_list <- function(x, x_name = NULL) {
 
 #' @describeIn chk_list Validate List
 #'
-#' @export
-#'
 #' @examples
-#'
 #' # vld_list
 #' vld_list(list())
 #' vld_list(list(x = 1))
 #' vld_list(mtcars)
 #' vld_list(1)
 #' vld_list(NULL)
+#' @export
 vld_list <- function(x) is.list(x)

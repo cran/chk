@@ -12,14 +12,15 @@ vld_range(x, range = c(0, 1))
 \arguments{
 \item{x}{The object to check.}
 
-\item{range}{A non-missing sorted vector of length 2 of the lower and upper permitted values.}
+\item{range}{A non-missing sorted vector of length 2 of the lower and
+upper permitted values.}
 
 \item{x_name}{A string of the name of object x or NULL.}
 }
 \value{
-The \code{chk_} functions throw an informative error if the test fails.
+The \code{chk_} function throws an informative error if the test fails.
 
-The \code{vld_} functions return a flag indicating whether the test was met.
+The \code{vld_} function returns a flag indicating whether the test was met.
 }
 \description{
 Checks all non-missing values fall within range using
@@ -32,11 +33,9 @@ Checks all non-missing values fall within range using
 }}
 
 \examples{
-
 # chk_range
 chk_range(0)
 try(chk_range(-0.1))
-
 # vld_range
 vld_range(numeric(0))
 vld_range(0)
