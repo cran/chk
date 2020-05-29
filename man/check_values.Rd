@@ -35,6 +35,10 @@ To check the range of the values in x pass two non-missing values
 
 To check that x only includes specific values
 pass three or more non-missing values.
+
+In the case of a factor ensure values has two levels to
+check that the levels of x are an ordered superset of the levels of value
+and three or more levels to check that they are identical.
 }
 \examples{
 check_values(1, numeric(0))
@@ -46,6 +50,8 @@ try(check_values(NA_real_, 1))
 Other check: 
 \code{\link{check_data}()},
 \code{\link{check_dim}()},
+\code{\link{check_dirs}()},
+\code{\link{check_files}()},
 \code{\link{check_key}()},
 \code{\link{check_names}()}
 }
