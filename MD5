@@ -1,7 +1,7 @@
-85c9de865c9e778ce066e4064f52256e *DESCRIPTION
+ba7b0572d21cb5722a13fc7a36b132be *DESCRIPTION
 ea57de7e09093be93ce7e63f5fff8105 *LICENSE
 f803d00078f9ee72c4ced7b6005032ea *NAMESPACE
-1312e508fa147712ac3c519ff8222342 *NEWS.md
+e6ce160da07c30df2057b34152ae728a *NEWS.md
 2f60ab26870a6ffbab25701efc7612cf *R/aaa.R
 aaf379c56bfec2e8dd260b1a630bbb5c *R/cc.R
 7a19252053011905182c05e33d6cfd5a *R/check-data.R
@@ -88,14 +88,14 @@ b79a003118d8484187973979086c6846 *R/p.R
 8b63648357f3ead704e0e36f6b6d6d52 *R/template.R
 63d074893376d6352fc74b7f4bad8355 *R/utils.R
 761e18c7452ff6e24e30f33f7bd24bfc *README.md
-d7971b5941de5e6274a4858001f6ae32 *build/chk.pdf
-2f20a18f0f0a431c353896272d65872d *build/vignette.rds
+1fd3dc649b69a1f9bd536860fe50925d *build/chk.pdf
+f3f579d9270475d367dd995d47079d7d *build/vignette.rds
 3c9e2d06e8560272e30c98b0c827478b *inst/doc/chk-families.R
 b5c296b4bde2c91be91618efeedd4b7f *inst/doc/chk-families.Rmd
-650e45359e3c2f4ca8fd7abe613d5227 *inst/doc/chk-families.html
+40feae73c4737ecc5ccb581efc4264f6 *inst/doc/chk-families.html
 68dd1117604705df4a3d5b79e3247f31 *inst/doc/chk.R
 5d1016bcfc298c5fe46440b0b515f36f *inst/doc/chk.Rmd
-472088a685f22d7b025f1322eb8b5a6e *inst/doc/chk.html
+aa1a81f64ca7076a2bc2b6a0c34b59a2 *inst/doc/chk.html
 4077d064b840cf5dd3d258388889dd98 *man/aaa.Rd
 035934ba1934b5152083d3460cedfa42 *man/abort_chk.Rd
 daf6e076be681eb661f3fc39ade56770 *man/cc.Rd
@@ -175,7 +175,7 @@ a46f3a96de98f4dddbc7d9b0c9abe5dd *man/chk_unused.Rd
 c442e6a6e8a8dacedc3f340a39e8a5e6 *man/chk_wnum.Rd
 dfbde875a06ca2376b0ccefaed2bea6f *man/chkor.Rd
 d1f59c088b2406bca6aa2fee7f76ea08 *man/deparse_backtick_chk.Rd
-6250112d9485e25acc72d2788653d971 *man/err.Rd
+14cb7f2e3acd924484a2334188be97b8 *man/err.Rd
 a83ee676736988b41624da1e53ec201f *man/expect_chk_error.Rd
 cb1e46f469cfbbbde29c8b5113e1d789 *man/figures/lifecycle-archived.svg
 c0d2e5a54f1fa4ff02bf9533079dd1f7 *man/figures/lifecycle-defunct.svg
@@ -188,7 +188,7 @@ c3978703d8f40f2679795335715e98f4 *man/figures/lifecycle-experimental.svg
 53b3f893324260b737b3c46ed2a0e643 *man/figures/lifecycle-stable.svg
 f3228000acce2b335e491936761be066 *man/figures/logo.png
 234ffa92864020b0e354b6ca6ada68cf *man/message_chk.Rd
-2cb7feaa2784d6ac3d0ee5077ea76e82 *man/p.Rd
+12fc43332fa8ab19b98f77894d004b19 *man/p.Rd
 cf3bc8796b6bc5f5215b0ea5e59f4d62 *man/params.Rd
 7fc5f2d1685e6061a8ad8dd0bf920617 *tests/testthat.R
 ca7ebe71891aab5b7824b931e69e7a78 *tests/testthat/test-aaa-deprecated.R
@@ -215,7 +215,7 @@ e7937d8cd864e36d5f2b7bfd85c6f4b4 *tests/testthat/test-chk-date.R
 0d522761a1f968ffc6fc1cc28ec32d05 *tests/testthat/test-chk-identical.R
 5e11aa5de5f2894e55bfacd83ca7f16a *tests/testthat/test-chk-integer.R
 b9ae94e272739fecb1f628592c2d9341 *tests/testthat/test-chk-is.R
-64a6bd81f935688c9e3fa1f152beb4e1 *tests/testthat/test-chk-join.R
+3470aab4a06f4d1498eda67c0cc13d1c *tests/testthat/test-chk-join.R
 2e8971f0600fb7a1652a8bb50f91db87 *tests/testthat/test-chk-logical.R
 e92e5a029c4d106eeb07caede9bdd005 *tests/testthat/test-chk-matrix.R
 84758b7cbd3084e11cf6c3f032ea0940 *tests/testthat/test-chk-not-any-na.R
