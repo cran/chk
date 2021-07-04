@@ -17,7 +17,7 @@
 #' @export
 chk_string <- function(x, x_name = NULL) {
   if (is.character(x) && length(x) == 1L && !anyNA(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must be a string (non-missing character scalar)", x = x)
@@ -36,3 +36,4 @@ chk_string <- function(x, x_name = NULL) {
 vld_string <- function(x, x_name = NULL) {
   is.character(x) && length(x) == 1L && !anyNA(x)
 }
+

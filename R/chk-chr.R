@@ -16,7 +16,7 @@
 #' @export
 chk_chr <- function(x, x_name = NULL) {
   if (vld_chr(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk((substitute(x)))
   abort_chk(x_name, " must be a character scalar", x = x)
@@ -33,3 +33,4 @@ chk_chr <- function(x, x_name = NULL) {
 #' vld_chr(1)
 #' @export
 vld_chr <- function(x) is.character(x) && length(x) == 1L
+

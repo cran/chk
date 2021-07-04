@@ -19,7 +19,7 @@
 #' @export
 chk_all_equivalent <- function(x, tolerance = sqrt(.Machine$double.eps), x_name = NULL) {
   if (vld_all_equivalent(x, tolerance = tolerance)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must have equivalent elements", x = x, tolerance = tolerance)
@@ -34,3 +34,4 @@ chk_all_equivalent <- function(x, tolerance = sqrt(.Machine$double.eps), x_name 
 vld_all_equivalent <- function(x, tolerance = sqrt(.Machine$double.eps)) {
   length(x) < 2L || all(vapply(x, vld_equivalent, TRUE, y = x[[1]], tolerance = tolerance))
 }
+

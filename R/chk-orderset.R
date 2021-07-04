@@ -21,7 +21,7 @@
 #' try(chk_orderset(2:1, 1:2))
 chk_orderset <- function(x, values, x_name = NULL) {
   if (vld_orderset(x, values)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk((substitute(x)))
   values <- values[values %in% x]
@@ -41,3 +41,4 @@ chk_orderset <- function(x, values, x_name = NULL) {
 #' vld_orderset(1:2, 2)
 vld_orderset <- function(x, values)
   vld_equivalent(unique(x[x %in% values]), values[values %in% x])
+

@@ -8,10 +8,11 @@ test_that("vld_factor", {
 })
 
 test_that("chk_factor", {
-  expect_null(chk_factor(factor("1")))
+  expect_identical(chk_factor(factor("1")), factor("1"))
   expect_invisible(chk_factor(factor("1")))
   expect_chk_error(
     chk_factor(TRUE),
     "^`TRUE` must be factor[.]$"
   )
 })
+

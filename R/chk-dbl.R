@@ -17,7 +17,7 @@
 #' @export
 chk_dbl <- function(x, x_name = NULL) {
   if (vld_dbl(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk((substitute(x)))
   abort_chk(x_name, " must be double (real) scalar", x = x)
@@ -34,3 +34,4 @@ chk_dbl <- function(x, x_name = NULL) {
 #' vld_dbl(1L)
 #' @export
 vld_dbl <- function(x) is.double(x) && length(x) == 1L
+

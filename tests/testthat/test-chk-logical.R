@@ -8,7 +8,7 @@ test_that("vld_logical", {
 })
 
 test_that("chk_logical", {
-  expect_null(chk_logical(TRUE))
+  expect_identical(chk_logical(TRUE), TRUE)
   expect_invisible(chk_logical(FALSE))
   expect_chk_error(
     chk_logical(1),

@@ -1,5 +1,3 @@
-context("chk-number")
-
 test_that("vld_wnum", {
   expect_false(vld_wnum(numeric(0)))
   expect_true(vld_wnum(NA_integer_))
@@ -13,8 +11,9 @@ test_that("vld_wnum", {
 })
 
 test_that("chk_wnum", {
-  expect_null(chk_wnum(1))
+  expect_identical(chk_wnum(1), 1)
   expect_invisible(chk_wnum(1))
   expect_chk_error(chk_wnum(TRUE), "^`TRUE` must be a whole numeric scalar[.]$")
   expect_chk_error(chk_wnum(TRUE, x_name = 1L), "^1 must be a whole numeric scalar[.]$")
 })
+

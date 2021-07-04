@@ -17,11 +17,10 @@
 #' @export
 chk_date_time <- function(x, x_name = NULL) {
   if (vld_date_time(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
-  abort_chk(x_name, " must be a date time (non-missing POSIXct scalar)", x = x)
-}
+  abort_chk(x_name, " must be a date time (non-missing POSIXct scalar)", x = x)}
 
 #' @describeIn chk_date_time Check Date Time (Deprecated)
 #'
@@ -32,10 +31,10 @@ chk_datetime <- function(x, x_name = NULL) {
                  with = "chk_date_time()",
                  id = "chk_datetime")
   if (vld_date_time(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
-  abort_chk(x_name, " must be a datetime (non-missing POSIXct scalar)", x = x)
+  abort_chk(x_name, " must be a date time (non-missing POSIXct scalar)", x = x)
 }
 
 #' @describeIn chk_date_time Validate Date Time

@@ -20,9 +20,10 @@ chk_null_or <- function(x, chk, ..., x_name = NULL) {
 
   try <- try_chk(chk(x, ..., x_name = x_name))
   if (is.null(try)) {
-    return(invisible())
+    return(invisible(x))
   }
   msg <- try_msg(try)
   msg <- sub("[.]$", " or NULL.", msg)
   abort_chk(msg, x = x)
 }
+

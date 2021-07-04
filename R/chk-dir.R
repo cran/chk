@@ -17,7 +17,7 @@
 #' @export
 chk_dir <- function(x, x_name = NULL) {
   if (vld_dir(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   chk_string(x, x_name = x_name)
@@ -36,3 +36,4 @@ chk_dir <- function(x, x_name = NULL) {
 #' vld_dir(tempfile())
 #' @export
 vld_dir <- function(x) vld_string(x) && dir.exists(x)
+

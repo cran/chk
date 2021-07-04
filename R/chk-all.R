@@ -30,7 +30,7 @@ chk_all <- function(x, chk_fun, ..., x_name = NULL) {
   args$x_name <- x_name
 
   do.call("lapply", args)
-  invisible()
+  invisible(x)
 }
 
 #' @describeIn chk_all Validate All

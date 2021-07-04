@@ -14,8 +14,6 @@ vld_used(...)
 }
 \value{
 The \code{chk_} function throws an informative error if the test fails.
-
-The \code{vld_} function returns a flag indicating whether the test was met.
 }
 \description{
 Checks if is ... used using

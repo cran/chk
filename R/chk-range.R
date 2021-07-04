@@ -17,10 +17,11 @@
 #' @export
 chk_range <- function(x, range = c(0, 1), x_name = NULL) {
   if (vld_range(x, range)) {
-    return(invisible())
+    return(invisible(x))
   }
 
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+
   if (length(x) == 1L) {
     if (range[1] == range[2]) {
       abort_chk(x_name, " must be ", cc(range[1]), ", not ", cc(x), x = x, range = range)
@@ -49,3 +50,4 @@ chk_range <- function(x, range = c(0, 1), x_name = NULL) {
 vld_range <- function(x, range = c(0, 1)) {
   all(x[!is.na(x)] >= range[1] & x[!is.na(x)] <= range[2])
 }
+

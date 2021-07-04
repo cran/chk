@@ -32,7 +32,8 @@
 #' @param vld_fun A vld_ function.
 #' @param ... Additional arguments.
 #' @return
-#' The `chk_` function throws an informative error if the test fails.
+#' The `chk_` function throws an informative error if the test fails or
+#' returns the original object if successful so it can used in pipes.
 #'
 #' The `vld_` function returns a flag indicating whether the test was met.
 NULL

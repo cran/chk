@@ -21,7 +21,8 @@ vld_all(x, vld_fun, ...)
 \item{vld_fun}{A vld_ function.}
 }
 \value{
-The \code{chk_} function throws an informative error if the test fails.
+The \code{chk_} function throws an informative error if the test fails or
+returns the original object if successful so it can used in pipes.
 
 The \code{vld_} function returns a flag indicating whether the test was met.
 }

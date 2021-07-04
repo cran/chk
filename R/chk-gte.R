@@ -17,7 +17,7 @@
 #' @export
 chk_gte <- function(x, value = 0, x_name = NULL) {
   if (vld_gte(x, value)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   if (length(x) == 1L) {
@@ -41,3 +41,4 @@ chk_gte <- function(x, value = 0, x_name = NULL) {
 #' vld_gte(c(0.1, 0.2, NA), value = 1)
 #' @export
 vld_gte <- function(x, value = 0) all(x[!is.na(x)] >= value)
+

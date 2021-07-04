@@ -1,5 +1,5 @@
 test_that("chk_tz", {
-  expect_null(chk_tz("UTC"))
+  expect_identical(chk_tz("UTC"), "UTC")
   expect_invisible(chk_tz("UTC"))
   expect_chk_error(
     chk_tz("TCU"),

@@ -17,13 +17,13 @@
 #' @export
 chk_wnum <- function(x, x_name = NULL) {
   if (vld_wnum(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk((substitute(x)))
   abort_chk(x_name, " must be a whole numeric scalar", x = x)
 }
 
-#' @describeIn chk_wnum Validate Double
+#' @describeIn chk_wnum Validate Whole Numeric Scalar
 #'
 #' @examples
 #' # vld_wnum
@@ -36,3 +36,4 @@ chk_wnum <- function(x, x_name = NULL) {
 vld_wnum <- function(x) {
   is.numeric(x) && length(x) == 1L && (is.integer(x) || vld_true(all.equal(x, trunc(x))))
 }
+

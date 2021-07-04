@@ -1,5 +1,3 @@
-context("chk-numeric")
-
 test_that("vld_numeric", {
   expect_true(vld_numeric(1))
   expect_true(vld_numeric(matrix(1:3)))
@@ -10,8 +8,9 @@ test_that("vld_numeric", {
 })
 
 test_that("chk_numeric", {
-  expect_null(chk_numeric(1))
+  expect_identical(chk_numeric(1), 1)
   expect_invisible(chk_numeric(1))
   expect_chk_error(chk_numeric("1"), "`\"1\"` must be numeric[.]$")
   expect_chk_error(chk_numeric("1", x_name = 1), "^1 must be numeric[.]$")
 })
+

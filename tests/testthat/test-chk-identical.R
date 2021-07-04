@@ -1,5 +1,3 @@
-context("chk-identical")
-
 test_that("vld_identical", {
   expect_true(vld_identical(1, 1))
   expect_true(vld_identical(1L, 1L))
@@ -12,7 +10,7 @@ test_that("vld_identical", {
 })
 
 test_that("chk_identical", {
-  expect_null(chk_identical(1, 1))
+  expect_identical(chk_identical(1, 1), 1, 1)
   expect_invisible(chk_identical(1, 1))
   expect_chk_error(
     chk_identical(1L, 2),
@@ -38,6 +36,7 @@ test_that("chk_identical", {
   )
 })
 
+
 test_that("vld_equal", {
   expect_true(vld_equal(1, 1))
   expect_true(vld_equal(1L, 1L))
@@ -56,7 +55,7 @@ test_that("vld_equal", {
 })
 
 test_that("chk_equal", {
-  expect_null(chk_equal(1, 1))
+  expect_identical(chk_equal(1, 1), 1, 1)
   expect_invisible(chk_equal(1, 1))
   expect_chk_error(
     chk_equal(c(x = 1L), 1L),
@@ -96,7 +95,7 @@ test_that("vld_equivalent", {
 })
 
 test_that("chk_equivalent", {
-  expect_null(chk_equivalent(1, 1))
+  expect_identical(chk_equivalent(1, 1), 1, 1)
   expect_invisible(chk_equivalent(1, 1))
   expect_chk_error(chk_equivalent(1, 1.001, 0.0001), c("^`1` must be equivalent to: 1[.]001[.]\n"))
   expect_chk_error(

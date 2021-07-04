@@ -10,7 +10,7 @@ test_that("vld_is", {
 })
 
 test_that("chk_is", {
-  expect_null(chk_is(1L, "integer"))
+  expect_identical(chk_is(1L, "integer"), 1L, "integer")
   expect_invisible(chk_is(1L, "integer"))
   expect_chk_error(chk_is(1, "integer"), "^`1` must inherit from class 'integer'[.]$")
   expect_chk_error(
@@ -22,3 +22,5 @@ test_that("chk_is", {
   expect_chk_error(chk_is(x, "c"), "`x` must inherit from class 'c'")
   expect_chk_error(chk_is(x, "c", x_name = "c"), "C must inherit from class 'c'")
 })
+
+

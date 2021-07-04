@@ -8,10 +8,11 @@ test_that("vld_double", {
 })
 
 test_that("chk_double", {
-  expect_null(chk_double(1))
+  expect_identical(chk_double(1), 1)
   expect_invisible(chk_double(1))
   expect_chk_error(
     chk_double(TRUE),
     "^`TRUE` must be double[.]$"
   )
 })
+

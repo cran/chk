@@ -21,7 +21,7 @@
 chk_equal <- function(x, y, tolerance = sqrt(.Machine$double.eps),
                       x_name = NULL) {
   if (vld_equal(x, y, tolerance = tolerance)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   y_name <- as_label(y)
@@ -36,3 +36,4 @@ chk_equal <- function(x, y, tolerance = sqrt(.Machine$double.eps),
 vld_equal <- function(x, y, tolerance = sqrt(.Machine$double.eps)) {
   vld_true(all.equal(x, y, tolerance))
 }
+

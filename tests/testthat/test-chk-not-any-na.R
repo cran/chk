@@ -1,5 +1,3 @@
-context("chk-not-any-na")
-
 test_that("vld_not_any_na", {
   expect_true(vld_not_any_na(1))
   expect_true(vld_not_any_na(matrix(1:3)))
@@ -10,8 +8,9 @@ test_that("vld_not_any_na", {
 })
 
 test_that("chk_not_any_na", {
-  expect_null(chk_not_any_na(1))
+  expect_identical(chk_not_any_na(1), 1)
   expect_invisible(chk_not_any_na(1))
   expect_chk_error(chk_not_any_na(NA), "^`NA` must not have any missing values[.]$")
   expect_chk_error(chk_not_any_na(NA, x_name = 1), "^1 must not have any missing values[.]$")
 })
+

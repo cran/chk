@@ -17,7 +17,7 @@
 #' @export
 chk_matrix <- function(x, x_name = NULL) {
   if (vld_matrix(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must be an matrix", x = x)

@@ -1,5 +1,3 @@
-context("chk-file")
-
 test_that("vld_file", {
   expect_false(vld_file(character(0)))
   expect_false(vld_file(tempdir()))
@@ -27,14 +25,14 @@ test_that("chk_file", {
   )
   write.csv(data.frame(x = 1), file1)
   teardown(unlink(file1))
-  expect_null(chk_file(file1))
+  expect_identical(chk_file(file1), file1)
   expect_invisible(chk_file(file1))
 
-  expect_null(chk_all(character(0), chk_file))
+  expect_identical(chk_all(character(0), chk_file), character(0), chk_file)
   expect_invisible(chk_all(character(0), chk_file))
-  expect_null(chk_all(file1, chk_file))
+  expect_identical(chk_all(file1, chk_file), file1, chk_file)
   expect_invisible(chk_all(file1, chk_file))
-  expect_null(chk_all(c(file1, file1), chk_file))
+  expect_identical(chk_all(c(file1, file1), chk_file), c(file1, file1), chk_file)
   expect_invisible(chk_all(c(file1, file1), chk_file))
   expect_chk_error(
     chk_all(c(file1, p0(file1, "b")), chk_file, x_name = "`vec`"),
@@ -49,7 +47,7 @@ test_that("vld_dir", {
 })
 
 test_that("chk_dir", {
-  expect_null(chk_dir(tempdir()))
+  expect_identical(chk_dir(tempdir()), tempdir())
   expect_invisible(chk_dir(tempdir()))
   expect_chk_error(
     chk_dir(tempfile()),
@@ -96,6 +94,7 @@ test_that("chk_ext", {
     chk_ext("file.pdf", c("png", "PDF")),
     "^`\"file.pdf\"` must have extension 'png' or 'PDF' [(]not 'pdf'[)][.]$"
   )
-  expect_null(chk_ext("file.pdf", "pdf"))
+  expect_identical(chk_ext("file.pdf", "pdf"), "file.pdf", "pdf")
   expect_invisible(chk_ext("file.pdf", "pdf"))
 })
+

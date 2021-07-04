@@ -1,6 +1,11 @@
-# chk 0.5.1
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-- Internal changes only.
+# chk 0.6.0
+
+- All `chk_xx()` functions now return invisible copy of x (if passes check).
+- Fixed bug in `check_key()` and `check_data()` when key is undefined for `sf `objects.
+- `chk_whole_numeric()` now accepts `Inf` values.
+- Removed `LazyData: true` for DESCRIPTION file to avoid CRAN check note.
 
 # chk 0.5.0
 

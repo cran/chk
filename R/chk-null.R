@@ -17,7 +17,7 @@
 #' @export
 chk_null <- function(x, x_name = NULL) {
   if (vld_null(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must be NULL", x = x)

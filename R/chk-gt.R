@@ -17,7 +17,7 @@
 #' @export
 chk_gt <- function(x, value = 0, x_name = NULL) {
   if (vld_gt(x, value)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   if (length(x) == 1L) {

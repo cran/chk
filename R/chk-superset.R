@@ -17,7 +17,7 @@
 #' @export
 chk_superset <- function(x, values, x_name = NULL) {
   if (vld_superset(x, values)) {
-    return(invisible())
+    return(invisible(x))
   }
   values <- sort(unique(values), na.last = TRUE)
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
@@ -34,3 +34,4 @@ chk_superset <- function(x, values, x_name = NULL) {
 #' vld_superset(integer(0), integer(0))
 #' @export
 vld_superset <- function(x, values) all(values %in% x)
+

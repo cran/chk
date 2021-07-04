@@ -1,5 +1,3 @@
-context("chk-subset")
-
 test_that("vld_subset", {
   expect_true(vld_subset(integer(0), 1))
   expect_false(vld_subset(1:3, 1:2))
@@ -16,7 +14,7 @@ test_that("vld_subset", {
 })
 
 test_that("chk_subset", {
-  expect_null(chk_subset(integer(0), 1))
+  expect_identical(chk_subset(integer(0), 1), integer(0), 1)
   expect_invisible(chk_subset(integer(0), 1))
   expect_chk_error(chk_subset(NA, c(0, Inf)), "^`NA` must match 0 or Inf, not NA[.]$")
   expect_chk_error(chk_subset(1:3, c(0, 1, NA)), "`1:3` must have values matching 0, 1 or NA[.]$")
@@ -52,9 +50,12 @@ test_that("vld_superset", {
 })
 
 test_that("chk_superset", {
-  expect_null(chk_superset(1, 1))
+  expect_identical(chk_superset(1, 1), 1, 1)
   expect_invisible(chk_superset(1, 1))
   expect_chk_error(chk_superset(1, 1:2), "^`1` must include 2[.]$")
   expect_chk_error(chk_superset(1, 1:3), "^`1` must include 2 and 3[.]$")
   expect_chk_error(chk_superset(2, 1), "^`2` must include 1[.]$")
 })
+
+
+

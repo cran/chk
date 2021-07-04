@@ -17,7 +17,7 @@
 #' @export
 chk_lt <- function(x, value = 0, x_name = NULL) {
   if (vld_lt(x, value)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   if (length(x) == 1L) {
@@ -39,3 +39,4 @@ chk_lt <- function(x, value = 0, x_name = NULL) {
 #' vld_lt("a", value = "b")
 #' @export
 vld_lt <- function(x, value = 0) all(x[!is.na(x)] < value)
+

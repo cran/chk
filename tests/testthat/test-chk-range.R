@@ -1,5 +1,3 @@
-context("chk-range")
-
 test_that("vld_range", {
   expect_true(vld_range(numeric(0)))
   expect_true(vld_range(numeric(0), c(1, 1)))
@@ -14,7 +12,7 @@ test_that("vld_range", {
 })
 
 test_that("chk_range", {
-  expect_null(chk_range(1))
+  expect_identical(chk_range(1), 1)
   expect_invisible(chk_range(1))
 
   expect_chk_error(chk_range(-1), "^`-1` must be between 0 and 1, not -1[.]$")
@@ -34,7 +32,7 @@ test_that("vld_lt", {
 })
 
 test_that("chk_lt", {
-  expect_null(chk_lt(-1))
+  expect_identical(chk_lt(-1), -1)
   expect_invisible(chk_lt(-1))
   expect_chk_error(chk_lt(1), "^`1` must be less than 0, not 1[.]$")
   expect_chk_error(chk_lt(c(1, -1)), "^`c[(]1, -1[)]` must have values less than 0[.]$")
@@ -51,7 +49,7 @@ test_that("vld_lte", {
 })
 
 test_that("chk_lte", {
-  expect_null(chk_lte(-1))
+  expect_identical(chk_lte(-1), -1)
   expect_invisible(chk_lte(-1))
   expect_chk_error(chk_lte(1), "^`1` must be less than or equal to 0, not 1[.]$")
   expect_chk_error(chk_lte(c(1, -1)), "^`c[(]1, -1[)]` must have values less than or equal to 0[.]$")
@@ -68,7 +66,7 @@ test_that("vld_gt", {
 })
 
 test_that("chk_gt", {
-  expect_null(chk_gt(1))
+  expect_identical(chk_gt(1), 1)
   expect_invisible(chk_gt(1))
   expect_chk_error(chk_gt(-1), "^`-1` must be greater than 0, not -1[.]$")
   expect_chk_error(chk_gt(c(1, -1)), "^`c[(]1, -1[)]` must have values greater than 0[.]$")
@@ -85,9 +83,10 @@ test_that("vld_gte", {
 })
 
 test_that("chk_gte", {
-  expect_null(chk_gte(1))
+  expect_identical(chk_gte(1), 1)
   expect_invisible(chk_gte(1))
   expect_chk_error(chk_gte(-1), "^`-1` must be greater than or equal to 0, not -1[.]$")
   expect_chk_error(chk_gte(c(1, -1)), "^`c[(]1, -1[)]` must have values greater than or equal to 0[.]$")
   expect_chk_error(chk_gte(-1, x_name = "another number"), "^Another number must be greater than or equal to 0, not -1[.]$")
 })
+

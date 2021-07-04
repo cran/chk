@@ -17,7 +17,7 @@
 #' @export
 chk_environment <- function(x, x_name = NULL) {
   if (vld_environment(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk((substitute(x)))
   abort_chk(x_name, " must be an environment", x = x)
@@ -33,3 +33,4 @@ chk_environment <- function(x, x_name = NULL) {
 #' vld_environment(environment())
 #' @export
 vld_environment <- function(x) is.environment(x)
+

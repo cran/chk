@@ -17,9 +17,10 @@
 #' @export
 chk_match <- function(x, regexp = ".+", x_name = NULL) {
   if (vld_match(x, regexp)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+
   if (length(x) == 1L) {
     abort_chk(x_name, " must match regular expression '", regexp, "'", x = x, regexp = regexp)
   }
@@ -37,3 +38,4 @@ chk_match <- function(x, regexp = ".+", x_name = NULL) {
 #' vld_match(NA_character_, regexp = ".*")
 #' @export
 vld_match <- function(x, regexp = ".+") all(grepl(regexp, x[!is.na(x)]))
+

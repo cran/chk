@@ -19,7 +19,7 @@
 #' @export
 chk_identical <- function(x, y, x_name = NULL) {
   if (identical(x, y)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   y_name <- as_label(y)
@@ -32,3 +32,4 @@ chk_identical <- function(x, y, x_name = NULL) {
 #' vld_identical(1, 1)
 #' @export
 vld_identical <- function(x, y) identical(x, y)
+

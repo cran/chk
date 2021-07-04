@@ -21,7 +21,7 @@
 #' @export
 chk_not_empty <- function(x, x_name = NULL) {
   if (vld_not_empty(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk((substitute(x)))
   abort_chk(x_name, " must not be empty (zero length)", x = x)
@@ -39,3 +39,4 @@ chk_not_empty <- function(x, x_name = NULL) {
 #' vld_not_empty(list())
 #' @export
 vld_not_empty <- function(x) length(x) != 0L
+

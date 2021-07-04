@@ -22,7 +22,7 @@
 #' @export
 chk_all_identical <- function(x, x_name = NULL) {
   if (vld_all_identical(x)) {
-    return(invisible())
+    return(invisible(x))
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   abort_chk(x_name, " must have identical elements", x = x)
@@ -37,3 +37,4 @@ chk_all_identical <- function(x, x_name = NULL) {
 vld_all_identical <- function(x) {
   length(x) < 2L || all(vapply(x, vld_identical, TRUE, y = x[[1]]))
 }
+

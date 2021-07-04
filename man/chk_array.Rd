@@ -15,12 +15,13 @@ vld_array(x)
 \item{x_name}{A string of the name of object x or NULL.}
 }
 \value{
-The \code{chk_} function throws an informative error if the test fails.
+The \code{chk_} function throws an informative error if the test fails or
+returns the original object if successful so it can used in pipes.
 
 The \code{vld_} function returns a flag indicating whether the test was met.
 }
 \description{
-Checks if is a array using
+Checks if is an array using
 
 \code{is.array(x)}
 }
@@ -33,6 +34,7 @@ Checks if is a array using
 # chk_array
 chk_array(array(1))
 try(chk_array(matrix(1)))
+
 # vld_array
 vld_array(1)
 vld_array(array(1))
