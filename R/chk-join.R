@@ -22,9 +22,11 @@ chk_join <- function(x, y, by, x_name = NULL) {
   }
   if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   y_name <- as_label(y)
-  abort_chk("All rows in ", x_name, " must match at least one in: ",
-            y_name,
-            x = x, y = y, by = by)
+  obj_of <- if(grepl("^<", y_name)) "the y object of class " else NULL
+  abort_chk("All rows in ", x_name, " must match at least one in ",
+    obj_of, y_name,
+    x = x, y = y, by = by
+  )
 }
 
 #' @describeIn chk_join Validate Join
@@ -44,4 +46,3 @@ vld_join <- function(x, y, by) {
     ))
   )
 }
-

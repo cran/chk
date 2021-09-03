@@ -1,6 +1,7 @@
 test_that("vld_join", {
   expect_true(vld_join(data.frame(z = 1), data.frame(z = 1:2), by = "z"))
   expect_false(vld_join(data.frame(z = 1), data.frame(z = 2), by = "z"))
+  expect_true(vld_join(data.frame(z = 1:2), data.frame(z = 1:2), by = "z"))
 })
 
 test_that("vld_join with by = NULL", {
@@ -33,17 +34,16 @@ test_that("vld_join with missing values", {
 })
 
 test_that("chk_join", {
-  expect_identical(chk_join(data.frame(z = 1), data.frame(z = 1), by = "z"),
-                   chk_join(data.frame(z = 1), data.frame(z = 1), by = "z"))
+  expect_identical(
+    chk_join(data.frame(z = 1), data.frame(z = 1), by = "z"),
+    chk_join(data.frame(z = 1), data.frame(z = 1), by = "z")
+  )
   expect_invisible(chk_join(data.frame(z = 1), data.frame(z = 1), by = "z"))
-
 })
 
 test_that("chk_join", {
   expect_chk_error(
     chk_join(data.frame(z = 1), data.frame(z = 2), by = "z"),
-    "^All rows in `data.frame[(]z [=] 1[)]` must match at least one in: <d"
+    "^All rows in `data.frame[(]z [=] 1[)]` must match at least one in the y object of class <d"
   )
 })
-
-

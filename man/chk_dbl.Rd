@@ -24,10 +24,14 @@ The \code{vld_} function returns a flag indicating whether the test was met.
 Checks if double scalar using
 
 \code{is.double(x) && length(x) == 1L}
+
+\lifecycle{soft-deprecated}
 }
 \section{Functions}{
 \itemize{
 \item \code{vld_dbl}: Validate Double
+
+\lifecycle{soft-deprecated}
 }}
 
 \examples{
@@ -38,7 +42,13 @@ try(chk_dbl(1L))
 vld_dbl(1)
 vld_dbl(double(0))
 vld_dbl(NA_real_)
-vld_dbl(c(1,1))
+vld_dbl(c(1, 1))
 vld_dbl(1L)
 }
-\concept{chk_dbl}
+\seealso{
+Other deprecated: 
+\code{\link{chk_chr}()},
+\code{\link{chk_deprecated}},
+\code{\link{chk_wnum}()}
+}
+\concept{deprecated}

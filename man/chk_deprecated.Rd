@@ -2,12 +2,10 @@
 % Please edit documentation in R/deprecated.R
 \name{chk_deprecated}
 \alias{chk_deprecated}
-\alias{chk_count}
 \alias{chk_dirs}
 \alias{chk_files}
 \alias{chk_has}
 \alias{chk_in}
-\alias{chk_length}
 \alias{chk_no_missing}
 \alias{vld_no_missing}
 \alias{chk_off}
@@ -17,8 +15,6 @@
 \alias{deparse_backtick}
 \title{Deprecated functions}
 \usage{
-chk_count(x, x_name = NULL)
-
 chk_dirs(x)
 
 chk_files(x)
@@ -26,8 +22,6 @@ chk_files(x)
 chk_has(x, values, x_name = NULL)
 
 chk_in(x, values, x_name = NULL)
-
-chk_length(x, length = 1L, x_name = NULL)
 
 chk_no_missing(x, x_name = NULL)
 
@@ -47,59 +41,45 @@ deparse_backtick(x)
 \item{x}{The object to check.}
 
 \item{x_name}{A string of the name of object x or NULL.}
-
-\item{length}{A count of the length.}
 }
 \description{
 Deprecated \code{chk_()} functions.
 }
 \section{Functions}{
 \itemize{
-\item \code{chk_count}: Check Count
-
-\lifecycle{soft-deprecated}
-
-Replace by \verb{[chk_whole_number](x); [chk_gte](x)}
-
 \item \code{chk_dirs}: Check Directories Exist
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace with \verb{[chk_all](x, [chk_dir])}
 
 \item \code{chk_files}: Check Files Exist
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace with \verb{[chk_all](x, [chk_file])}
 
 \item \code{chk_has}: Check Has
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace by \code{\link[=chk_superset]{chk_superset()}}
 
 \item \code{chk_in}: Check In
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace by \code{\link[=chk_subset]{chk_subset()}}
 
-\item \code{chk_length}: Check Length
-
-\lifecycle{soft-deprecated}
-
-Replace by \verb{[chk_range](length(x))}
-
 \item \code{chk_no_missing}: Check No Missing Values
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace with \code{\link[=chk_not_any_na]{chk_not_any_na()}}
 
 \item \code{vld_no_missing}: Validate No Missing Values
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace with \code{\link[=vld_not_any_na]{vld_not_any_na()}}
 
@@ -123,15 +103,22 @@ This approach is no longer recommended
 
 \item \code{chk_proportion}: Check Proportion
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace by \verb{[chk_number](x); [chk_range](x)}
 
 \item \code{deparse_backtick}: Deparse Backtick
 
-\lifecycle{soft-deprecated}
+\lifecycle{deprecated}
 
 Replace with \code{\link[=deparse_backtick_chk]{deparse_backtick_chk()}}
 }}
 
+\seealso{
+Other deprecated: 
+\code{\link{chk_chr}()},
+\code{\link{chk_dbl}()},
+\code{\link{chk_wnum}()}
+}
+\concept{deprecated}
 \keyword{internal}

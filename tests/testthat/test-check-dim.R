@@ -12,12 +12,12 @@ test_that("check_dim length", {
   )
   expect_chk_error(
     check_dim(1, values = FALSE),
-    "^`length[(]1[)]` must be equal to: 0L[.]"
+    "^`length[(]1[)]` must be equal to 0L[.]"
   )
   expect_identical(check_dim(2, values = 1), check_dim(2, values = 1))
   expect_chk_error(
     check_dim(1, values = 2),
-    "^`length[(]1[)]` must be equal to: 2[.]"
+    "^`length[(]1[)]` must be equal to 2[.]"
   )
   expect_chk_error(
     check_dim(1, values = 2:3),
@@ -30,7 +30,7 @@ test_that("check_dim length", {
   expect_identical(check_dim(1:2, values = 2:3), check_dim(1:2, values = 2:3))
   expect_chk_error(
     check_dim(2, values = c(2, 2)),
-    "`length[(]2[)]` must be equal to: 2[.]"
+    "`length[(]2[)]` must be equal to 2[.]"
   )
   expect_chk_error(
     check_dim(2, values = c(2, 2, 2)),
@@ -40,11 +40,16 @@ test_that("check_dim length", {
     check_dim(2, values = c(3, 2, 2)),
     "`length[(]2[)]` must match 2 or 3, not 1[.]"
   )
+
+  expect_chk_error(
+    check_dim(1, values = 1.1), "^At least one of the following conditions must be met:\n[*] `values` must be a flag [(]TRUE or FALSE[)].\n[*] `values` must be a whole numeric vector \\(integer vector or double equivalent\\)\\.$")
 })
 
 test_that("check_dim nrow", {
-  expect_identical(check_dim(data.frame(x = 1), dim = nrow),
-                   check_dim(data.frame(x = 1), dim = nrow))
+  expect_identical(
+    check_dim(data.frame(x = 1), dim = nrow),
+    check_dim(data.frame(x = 1), dim = nrow)
+  )
   expect_invisible(check_dim(data.frame(x = 1), dim = nrow))
   expect_chk_error(
     check_dim(data.frame(x = integer(0)), values = TRUE, dim = nrow),

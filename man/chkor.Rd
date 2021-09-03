@@ -13,7 +13,10 @@ chkor(...)
 An informative error if the test fails.
 }
 \description{
-Check OR
+The \code{chkor()} function has been deprecated for the faster \code{chkor_vld()}.
+}
+\details{
+\lifecycle{soft-deprecated}
 }
 \examples{
 chkor()
@@ -21,4 +24,7 @@ chkor(chk_flag(TRUE))
 try(chkor(chk_flag(1)))
 try(chkor(chk_flag(1), chk_flag(2)))
 chkor(chk_flag(1), chk_flag(TRUE))
+}
+\seealso{
+\code{\link[=chk_null_or]{chk_null_or()}}
 }

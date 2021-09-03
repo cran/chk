@@ -1,5 +1,26 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# chk 0.7.0
+
+## Added
+
+- Added `chkor_vld()` as faster replacement for soft-deprecated `chkor()`.
+- Sped up `chk_null_or()` by soft-deprecating `chk` argument for `vld` argument.
+- Un-deprecated `chk_count()` and `chk_length()` because so useful.
+- Updated error messages to precede objects which are described by their class by 'the y object of class'.
+
+## Fixed
+
+- `chk_null_or()` now returns (invisible) x.
+
+## Deprecated 
+
+- Soft deprecated `chkor()` for `chkor_vld()` as slow.
+- Soft deprecated `chk` argument of `chk_null_or()` for `vld` argument.
+- Soft deprecated `chk_chr()`, `chk_dbl()` and `chk_wnum()` and `vld_` equivalents.
+- Warn deprecated `chk_count()`, `chk_dirs()`, `chk_files()`, `chk_has()`, `chk_in()`, `chk_length()`, `chk_no_missing()`, `vld_no_missing()`, `chk_proportion()`
+- Stop deprecated `chk_off()`, `chk_on()`, `is_chk_on()`,
+
 # chk 0.6.0
 
 - All `chk_xx()` functions now return invisible copy of x (if passes check).
