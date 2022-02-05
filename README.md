@@ -9,7 +9,7 @@
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R-CMD-check](https://github.com/poissonconsulting/chk/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/chk/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/poissonconsulting/chk/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/chk?branch=master)
+coverage](https://codecov.io/gh/poissonconsulting/chk/branch/master/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/chk?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![CRAN
@@ -50,24 +50,19 @@ y <- "a"
 
 chk_string(y)
 chk_flag(y)
-#> Error: `y` must be a flag (TRUE or FALSE).
-
-chkor(chk_flag(y), chk_number(y))
-#> Warning: `chkor()` was deprecated in chk 0.6.1.
-#> Please use `chkor_vld()` instead.
-#> Error: At least one of the following conditions must be met:
-#> * `y` must be a flag (TRUE or FALSE).
-#> * `y` must be a number (non-missing numeric scalar).
+#> Error in `err()` at chk/R/utils.R:18:2:
+#> ! `y` must be a flag (TRUE or FALSE).
 
 data <- data.frame(x = 1:2)
 chk_range(nrow(data), c(3, 8))
-#> Error: `nrow(data)` must be between 3 and 8, not 2.
+#> Error in `err()` at chk/R/utils.R:18:2:
+#> ! `nrow(data)` must be between 3 and 8, not 2.
 ```
 
 Error messages follow the [tidyverse style
 guide](https://style.tidyverse.org/error-messages.html) while the errors
 themselves are [rlang
-errors](https://rlang.r-lib.org/reference/abort.html) of subclass
+errors](https://rlang.r-lib.org/reference/abort.html) of class
 `chk_error`.
 
 ## Information

@@ -153,7 +153,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chk_flag</span>(y)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">chk_flag</span>(y)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error: `y` must be a flag (TRUE or FALSE).</span></span></code></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `err()`:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! `y` must be a flag (TRUE or FALSE).</span></span></code></pre></div>
 <p>The error messages, which follow the <a href="https://style.tidyverse.org/error-messages.html">tidyverse style guide</a>, are designed to allow the user to quickly identify the problem with the argument value(s) they are providing. The errors are <a href="https://rlang.r-lib.org/reference/abort.html">rlang errors</a> of subclass <code>&#39;chk_error&#39;</code>.</p>
 </div>
 <div id="vld_-functions" class="section level3">
@@ -165,7 +166,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1] FALSE</span></span></code></pre></div>
 <p>The <code>vld_</code> functions allow developers to provide their own error messages.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">vld_flag</span>(<span class="cn">NA</span>)) <span class="fu">abort_chk</span>(<span class="st">&quot;`NA` is not TRUE or FALSE!!&quot;</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error: `NA` is not TRUE or FALSE!!</span></span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `err()`:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! `NA` is not TRUE or FALSE!!</span></span></code></pre></div>
 </div>
 </div>
 <div id="using-chk" class="section level2">
@@ -179,11 +181,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">fun1</span>(<span class="dv">1</span>)</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fl">1.3</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">fun1</span>(<span class="at">x =</span> y)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error: `x` must be a whole number (non-missing integer scalar or double equivalent).</span></span></code></pre></div>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `err()`:</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! `x` must be a whole number (non-missing integer scalar or double equivalent).</span></span></code></pre></div>
 <p>If this is not the case, developers can provide a different name using the <code>x_name</code> argument.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chk_flag</span>(x, <span class="at">x_name =</span> <span class="st">&quot;`zzz`&quot;</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error: `zzz` must be a flag (TRUE or FALSE).</span></span></code></pre></div>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `err()`:</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! `zzz` must be a flag (TRUE or FALSE).</span></span></code></pre></div>
 <p><strong>IMPORTANT NOTE</strong></p>
 <p>As the <code>chk_</code> (and <code>vld_</code>) functions are not expected to be directly exposed to users they don’t check any of their arguments (other than the object of interest of course!) to ensure that they are as fast as possible.</p>
 </div>
@@ -204,9 +208,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><code>abort_chk()</code></h3>
 <p>The <code>abort_chk()</code> function converts multiple arguments to a string using <code>paste0(..., collapse = &#39;&#39;)</code> and provides number sensitive <code>sprintf</code>-like types. By default it also capitalizes the first character and adds a missing period.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">abort_chk</span>(<span class="st">&quot;There %r %n problem director%y%s.&quot;</span>, <span class="at">n =</span> <span class="dv">1</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error: There is 1 problem directory.</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abort_chk</span>(<span class="st">&quot;there %r %n &quot;</span>, <span class="st">&quot;problem director%y%s&quot;</span>, <span class="at">n =</span> <span class="dv">2</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error: There are 2 problem directories.</span></span></code></pre></div>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `err()`:</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! There is 1 problem directory.</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abort_chk</span>(<span class="st">&quot;there %r %n &quot;</span>, <span class="st">&quot;problem director%y%s&quot;</span>, <span class="at">n =</span> <span class="dv">2</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Error in `err()`:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; ! There are 2 problem directories.</span></span></code></pre></div>
 </div>
 <div id="check_-functions" class="section level3">
 <h3><code>check_</code> Functions</h3>

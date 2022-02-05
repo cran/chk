@@ -1,6 +1,6 @@
 Package: chk
 Title: Check User-Supplied Function Arguments
-Version: 0.7.0
+Version: 0.8.0
 Authors@R: 
     c(person(given = "Joe",
              family = "Thorley",
@@ -20,6 +20,11 @@ Authors@R:
              role = "ctb",
              email = "nadine@poissonconsulting.ca",
              comment = c(ORCID = "0000-0003-4470-8361")),
+      person(given = "Evan",
+             family = "Amies-Galonski",
+             role = "ctb",
+             email = "evan@poissonconsulting.ca",
+             comment = c(ORCID = "0000-0003-1096-2089")),
       person(given = "Poisson Consulting",
              role = c("cph", "fnd")))
 Description: For developers to check user-supplied function arguments.  It
@@ -36,14 +41,15 @@ RdMacros: lifecycle
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 NeedsCompilation: no
-Packaged: 2021-09-02 14:12:09 UTC; joe
+Packaged: 2022-02-05 21:26:01 UTC; joe
 Author: Joe Thorley [aut, cre] (<https://orcid.org/0000-0002-7683-4592>),
   Kirill Müller [aut] (<https://orcid.org/0000-0002-1416-3412>),
   Ayla Pearson [ctb] (<https://orcid.org/0000-0001-7388-1222>),
   Nadine Hussein [ctb] (<https://orcid.org/0000-0003-4470-8361>),
+  Evan Amies-Galonski [ctb] (<https://orcid.org/0000-0003-1096-2089>),
   Poisson Consulting [cph, fnd]
 Maintainer: Joe Thorley <joe@poissonconsulting.ca>
 Repository: CRAN
-Date/Publication: 2021-09-03 22:50:02 UTC
+Date/Publication: 2022-02-05 21:50:02 UTC
