@@ -31,9 +31,9 @@ Checks if not any missing values using
 }
 \section{Functions}{
 \itemize{
-\item \code{vld_not_any_na}: Validate Not Any Missing Values
-}}
+\item \code{vld_not_any_na()}: Validate Not Any Missing Values
 
+}}
 \examples{
 # chk_not_any_na
 chk_not_any_na(1)
@@ -50,8 +50,10 @@ vld_not_any_na(TRUE)
 Other chk_misc: 
 \code{\link{chk_length}()},
 \code{\link{chk_match}()},
+\code{\link{chk_missing}()},
 \code{\link{chk_named}()},
 \code{\link{chk_not_empty}()},
+\code{\link{chk_not_missing}()},
 \code{\link{chk_sorted}()},
 \code{\link{chk_unique}()},
 \code{\link{chk_valid_name}()}

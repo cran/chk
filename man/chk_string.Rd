@@ -7,7 +7,7 @@
 \usage{
 chk_string(x, x_name = NULL)
 
-vld_string(x, x_name = NULL)
+vld_string(x)
 }
 \arguments{
 \item{x}{The object to check.}
@@ -27,9 +27,9 @@ Checks if string
 }
 \section{Functions}{
 \itemize{
-\item \code{vld_string}: Validate String
-}}
+\item \code{vld_string()}: Validate String
 
+}}
 \examples{
 # chk_string
 chk_string("1")

@@ -1,10 +1,16 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# chk 0.8.1
+
+- Fixed bug where`check_key()` failing on sf objects.
+
+
 # chk 0.8.0
 
 - Updated deprecated argument `.subclass` to `class` in rlang function calls
 - Added `chk_valid_name()`.
 - Fixed `chk_join()` with `sf` data frames.
+
 
 # chk 0.7.0
 
