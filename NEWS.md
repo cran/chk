@@ -1,4 +1,13 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# chk 0.9.0
+
+- Added `chk_compatible_lengths()` and `vld_compatible_lengths()` to check that lengths of objects are 'strictly recyclable'.
+- Added `inclusive = TRUE` argument to `chk_range()`.
+- Added `upper` argument to `chk_length()`.
+- `vld_sorted()` and `chk_sorted()` now ignore missing values.
+- Soft deprecated `.subclass` for `class` argument in `err()`, `wrn()` and `msg()`.
+
 
 # chk 0.8.1
 

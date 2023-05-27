@@ -5,14 +5,16 @@
 \alias{vld_length}
 \title{Check Length}
 \usage{
-chk_length(x, length = 1L, x_name = NULL)
+chk_length(x, length = 1L, upper = length, x_name = NULL)
 
-vld_length(x, length = 1L)
+vld_length(x, length = 1L, upper = length)
 }
 \arguments{
 \item{x}{The object to check.}
 
 \item{length}{A count of the length.}
+
+\item{upper}{A count of the max length.}
 
 \item{x_name}{A string of the name of object x or NULL.}
 }
@@ -23,9 +25,9 @@ returns the original object if successful so it can used in pipes.
 The \code{vld_} function returns a flag indicating whether the test was met.
 }
 \description{
-Checks length is a particular value using
+Checks length is a particular value or range using
 
-\code{length(x) == length}
+\code{length(x) >= length && length(x) <= upper}
 }
 \section{Functions}{
 \itemize{
