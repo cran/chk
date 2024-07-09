@@ -246,25 +246,25 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <h2>Check Logical</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_true(x)</code></td>
 <td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x) &amp;&amp; x</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_false(x)</code></td>
 <td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x) &amp;&amp; !x</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_flag(x)</code></td>
 <td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_lgl(x)</code></td>
 <td align="left"><code>is.logical(x) &amp;&amp; length(x) == 1L</code></td>
 </tr>
@@ -279,37 +279,37 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="77%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_scalar(x)</code></td>
 <td align="left"><code>length(x) == 1L</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_number(x)</code></td>
 <td align="left"><code>is.numeric(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_whole_number(x)</code></td>
 <td align="left"><code>vld_number(x) &amp;&amp; (is.integer(x) || vld_true(all.equal(x, trunc(x))))</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_string(x)</code></td>
 <td align="left"><code>is.character(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_date(x)</code></td>
 <td align="left"><code>inherits(x, &quot;Date&quot;) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_datetime(x)</code></td>
 <td align="left"><code>inherits(x, &quot;POSIXct&quot;) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_tz(x)</code></td>
 <td align="left"><code>is.character(x) &amp;&amp; length(x) == 1L &amp;&amp; !anyNA(x) &amp;&amp; x %in% OlsonNames()</code></td>
 </tr>
@@ -324,29 +324,29 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="66%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_range(x, range = c(0, 1))</code></td>
 <td align="left"><code>all(x[!is.na(x)] &gt;= range[1] &amp; x[!is.na(x)] &lt;= range[2])</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_lt(x, value = 0)</code></td>
 <td align="left"><code>all(x[!is.na(x)] &lt; value)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_lte(x, value = 0)</code></td>
 <td align="left"><code>all(x[!is.na(x)] &lt;= value)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_gt(x, value = 0)</code></td>
 <td align="left"><code>all(x[!is.na(x)] &gt; value)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_gte(x, value = 0)</code></td>
 <td align="left"><code>all(x[!is.na(x)] &gt;= value)</code></td>
 </tr>
@@ -361,21 +361,21 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="40%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_identical(x, y)</code></td>
 <td align="left"><code>identical(x, y)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_equal(x, y, tolerance = sqrt(.Machine$double.eps))</code></td>
 <td align="left"><code>vld_true(all.equal(x, y, tolerance))</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_equivalent(x, y, tolerance = sqrt(.Machine$double.eps))</code></td>
 <td align="left"><code>vld_true(all.equal(x, y, tolerance, check.attributes = FALSE))</code></td>
 </tr>
@@ -390,25 +390,25 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="66%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_all(x, chk_fun, ...)</code></td>
 <td align="left"><code>all(vapply(x, chk_fun, TRUE, ...))</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_all_identical(x)</code></td>
 <td align="left"><code>length(x) &lt; 2L || all(vapply(x, vld_identical, TRUE, y = x[[1]]))</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_all_equal(x, tolerance = sqrt(.Machine$double.eps))</code></td>
 <td align="left"><code>length(x) &lt; 2L || all(vapply(x, vld_equal, TRUE, y = x[[1]], tolerance = tolerance))</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_all_equivalent(x, tolerance = sqrt(.Machine$double.eps))</code></td>
 <td align="left"><code>length(x) &lt; 2L || all(vapply(x, vld_equivalent, TRUE, y = x[[1]], tolerance = tolerance))</code></td>
 </tr>
@@ -423,25 +423,25 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="66%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_setequal(x, values)</code></td>
 <td align="left"><code>setequal(x, values)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_subset(x, values)</code></td>
 <td align="left"><code>all(x %in% values)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_superset(x, values)</code></td>
 <td align="left"><code>all(values %in% x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_join(x, y, by)</code></td>
 <td align="left"><code>identical(nrow(x), nrow(merge(x, unique(y[if (is.null(names(by))) by else names(by)]), by = by)))</code></td>
 </tr>
@@ -456,49 +456,49 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="66%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_atomic(x)</code></td>
 <td align="left"><code>is.atomic(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_function(x, formals = NULL)</code></td>
 <td align="left"><code>is.function(x) &amp;&amp; (is.null(formals) || length(formals(x)) == formals)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_numeric(x)</code></td>
 <td align="left"><code>is.numeric(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_s3_class(x, class)</code></td>
 <td align="left"><code>!isS4(x) &amp;&amp; inherits(x, class)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_s4_class(x, class)</code></td>
 <td align="left"><code>isS4(x) &amp;&amp; methods::is(x, class)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_vector(x)</code></td>
 <td align="left"><code>is.vector(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_whole_numeric(x)</code></td>
 <td align="left"><code>is.integer(x) || (is.double(x) &amp;&amp; vld_true(all.equal(x, as.integer(x))))</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_array(x)</code></td>
 <td align="left"><code>is.array(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_matrix(x)</code></td>
 <td align="left"><code>is.matrix(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_data(x)</code></td>
 <td align="left"><code>inherits(x, &quot;data.frame&quot;)</code></td>
 </tr>
@@ -509,33 +509,33 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <h2>Check Typeof</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_environment(x)</code></td>
 <td align="left"><code>is.environment(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_list(x)</code></td>
 <td align="left"><code>is.list(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_logical(x)</code></td>
 <td align="left"><code>is.logical(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_double(x)</code></td>
 <td align="left"><code>is.double(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_integer(x)</code></td>
 <td align="left"><code>is.integer(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_character(x)</code></td>
 <td align="left"><code>is.character(x)</code></td>
 </tr>
@@ -546,17 +546,17 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <h2>Check NULLs</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_null(x)</code></td>
 <td align="left"><code>is.null(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_not_null(x)</code></td>
 <td align="left"><code>!is.null(x)</code></td>
 </tr>
@@ -567,17 +567,17 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <h2>Check Ellipsis</h2>
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_used(...)</code></td>
 <td align="left"><code>length(list(...)) != 0L</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_unused(...)</code></td>
 <td align="left"><code>length(list(...)) == 0L</code></td>
 </tr>
@@ -592,21 +592,21 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="66%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_file(x)</code></td>
 <td align="left"><code>vld_string(x) &amp;&amp; file.exists(x) &amp;&amp; !dir.exists(x)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_ext(x, ext)</code></td>
 <td align="left"><code>vld_string(x) &amp;&amp; vld_subset(tools::file_ext(x), ext)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_dir(x)</code></td>
 <td align="left"><code>vld_string(x) &amp;&amp; dir.exists(x)</code></td>
 </tr>
@@ -621,33 +621,33 @@ space, the <code>x_name = NULL</code> argument is not shown.</p>
 <col width="60%" />
 </colgroup>
 <thead>
-<tr class="header">
+<tr>
 <th align="left">Function</th>
 <th align="left">Code</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_match(x, regexp = &quot;.+&quot;)</code></td>
 <td align="left"><code>all(grepl(regexp, x[!is.na(x)]))</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_named(x)</code></td>
 <td align="left"><code>!is.null(names(x))</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_not_empty(x)</code></td>
 <td align="left"><code>length(x) != 0L</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_not_any_na(x)</code></td>
 <td align="left"><code>!anyNA(x)</code></td>
 </tr>
-<tr class="odd">
+<tr>
 <td align="left"><code>chk_unique(x, incomparables = FALSE)</code></td>
 <td align="left"><code>!anyDuplicated(x, incomparables = incomparables)</code></td>
 </tr>
-<tr class="even">
+<tr>
 <td align="left"><code>chk_sorted(x)</code></td>
 <td align="left"><code>is.unsorted(x)</code></td>
 </tr>
