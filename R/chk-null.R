@@ -8,7 +8,13 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_nulls
+#' @family null_checkers
+#'
+#' @seealso [is.null()]
+#'
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_null

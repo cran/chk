@@ -11,7 +11,13 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_files
+#' @family file_checkers
+#'
+#' @seealso [vld_string()]
+#' @seealso [vld_subset()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_ext

@@ -7,7 +7,11 @@
 #' @param y A data.frame with columns in by.
 #' @inherit params return
 #'
-#' @family chk_set
+#' @family misc_checkers
+#'
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_join
@@ -37,7 +41,9 @@ chk_join <- function(x, y, by, x_name = NULL) {
 #' vld_join(data.frame(z = 1), data.frame(a = 2), by = c(z = "a"))
 #' @export
 vld_join <- function(x, y, by) {
-  if(is.null(by)) return(FALSE)
+  if (is.null(by)) {
+    return(FALSE)
+  }
   identical(
     nrow(x),
     nrow(merge(as.data.frame(x), unique(as.data.frame(y)[by]),

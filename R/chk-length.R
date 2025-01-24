@@ -8,8 +8,13 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_misc
-#' @seealso [check_dim()]
+#' @family length_checkers
+#'
+#' @seealso [length()], [check_length()], [check_dim()]
+#'
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_length

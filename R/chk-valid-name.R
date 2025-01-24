@@ -8,7 +8,13 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_misc
+#' @family name_checkers
+#'
+#' @seealso [identical()]
+#' @seealso [make.names()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_valid_name

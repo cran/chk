@@ -5,10 +5,20 @@
 #'
 #' `is.logical(x) && length(x) == 1L`
 #'
+#' If you only want to check the data type (not whether `length(x) == 1`),
+#' you should use the [chk_logical()] function.
+#'
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_logical
+#' @family logical_checkers
+#' @family scalar_checkers
+#'
+#' @seealso [is.logical()]
+#' @seealso [length()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_lgl
@@ -33,4 +43,12 @@ chk_lgl <- function(x, x_name = NULL) {
 #' vld_lgl(1)
 #' vld_lgl(c(TRUE, TRUE))
 #' @export
-vld_lgl <- function(x) is.logical(x) && length(x) == 1L
+vld_lgl <- function(x) {
+  deprecate_soft(
+    "0.9.3",
+    what = "chk::chk_lgl()",
+    details = "Please use `chk::chk_scalar(x);` `chk::chk_logical(x)` instead",
+    id = "chk_lgl"
+  )
+  is.logical(x) && length(x) == 1L
+}

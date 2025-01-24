@@ -39,7 +39,13 @@ vld_not_null(1)
 vld_not_null(NULL)
 }
 \seealso{
-Other chk_nulls: 
+\code{\link[=is.null]{is.null()}}
+
+For more details about the use of this function,
+please read the article
+\code{vignette("chk-families")}.
+
+Other null_checkers: 
 \code{\link{chk_null}()}
 }
-\concept{chk_nulls}
+\concept{null_checkers}

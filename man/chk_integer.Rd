@@ -43,14 +43,20 @@ vld_integer(1)
 vld_integer(TRUE)
 }
 \seealso{
-Other chk_typeof: 
+\code{\link[=is.integer]{is.integer()}}
+
+For more details about the use of this function,
+please read the article
+\code{vignette("chk-families")}.
+
+Other data_type_checkers: 
 \code{\link{chk_character}()},
 \code{\link{chk_character_or_factor}()},
-\code{\link{chk_count}()},
+\code{\link{chk_complex}()},
 \code{\link{chk_double}()},
 \code{\link{chk_environment}()},
-\code{\link{chk_factor}()},
-\code{\link{chk_list}()},
-\code{\link{chk_logical}()}
+\code{\link{chk_logical}()},
+\code{\link{chk_numeric}()},
+\code{\link{chk_raw}()}
 }
-\concept{chk_typeof}
+\concept{data_type_checkers}

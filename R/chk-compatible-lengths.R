@@ -15,6 +15,12 @@
 #'   The intent of the function is to check that only strict recycling is
 #'   occurring.
 #'
+#' @family length_checkers
+#'
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
+#'
 #' @examples
 #' # chk_compatible_lengths
 #'

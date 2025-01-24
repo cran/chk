@@ -41,7 +41,13 @@ fun(1)
 try(fun(1, 2))
 }
 \seealso{
-Other chk_ellipsis: 
+\code{\link[=length]{length()}}
+
+For more details about the use of this function,
+please read the article
+\code{vignette("chk-families")}.
+
+Other ellipsis_checkers: 
 \code{\link{chk_used}()}
 }
-\concept{chk_ellipsis}
+\concept{ellipsis_checkers}

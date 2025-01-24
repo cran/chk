@@ -12,7 +12,12 @@
 #' @inheritParams chk_flag
 #' @inherit params return
 #'
-#' @family chk_is
+#' @family data_type_checkers
+#'
+#' @seealso [is.numeric()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_numeric

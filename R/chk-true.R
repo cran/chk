@@ -8,7 +8,14 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_logical
+#' @family logical_checkers
+#' @family scalar_checkers
+#'
+#' @seealso [is.logical()]
+#' @seealso [length()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_true

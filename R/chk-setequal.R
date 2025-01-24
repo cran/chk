@@ -8,7 +8,13 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_set
+#' @family set_checkers
+#'
+#' @seealso [setequal()]
+#'
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_setequal

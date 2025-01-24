@@ -1,5 +1,13 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# chk 0.10.0
+
+- Added `chk_complex()` and `vld_complex()`. (#158).
+- Added `chk_raw()` and `vld_raw()` (#157).
+- Added `check_length()`.
+- Soft-deprecated `chk_lgl()` for `chk_scalar()` and `chk_logical()`.
+- Fixed nested backticks so that error messages only have one set of backticks.
+
 # chk 0.9.2
 
 - No longer officially supports R 3.6 as dependency `evaluate` of suggested dependency `testthat` switched to 4.0.

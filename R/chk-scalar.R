@@ -8,7 +8,12 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_scalars
+#' @family scalar_checkers
+#'
+#' @seealso [length()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_scalar

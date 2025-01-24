@@ -8,7 +8,13 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_typeof
+#' @family factor_checkers
+#' @family data-type_checkers
+#'
+#' @seealso [is.factor()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_factor

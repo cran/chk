@@ -13,8 +13,8 @@ For developers to check user-supplied function arguments. It is designed to be s
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://github.com/poissonconsulting/chk}
   \item \url{https://poissonconsulting.github.io/chk/}
-  \item \url{https://github.com/poissonconsulting/chk/}
   \item Report bugs at \url{https://github.com/poissonconsulting/chk/issues/}
 }
 
@@ -30,6 +30,7 @@ Authors:
 
 Other contributors:
 \itemize{
+  \item Florencia D'Andrea [contributor]
   \item Nadine Hussein \email{nadine@poissonconsulting.ca} (\href{https://orcid.org/0000-0003-4470-8361}{ORCID}) [contributor]
   \item Evan Amies-Galonski \email{evan@poissonconsulting.ca} (\href{https://orcid.org/0000-0003-1096-2089}{ORCID}) [contributor]
   \item Poisson Consulting [copyright holder, funder]

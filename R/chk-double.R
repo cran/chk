@@ -8,7 +8,12 @@
 #' @inheritParams params
 #' @inherit params return
 #'
-#' @family chk_typeof
+#' @family data_type_checkers
+#'
+#' @seealso [is.double()]
+#' @seealso For more details about the use of this function,
+#' please read the article
+#' `vignette("chk-families")`.
 #'
 #' @examples
 #' # chk_double
